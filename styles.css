@@ -1,0 +1,84 @@
+:root {
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-big: 4rem;
+
+    --color-light-main: hsla(360, 0%, 90%, 1);
+    --color-light-grey: hsla(360, 0%, 80%, 1);
+
+    --color-dark-main: hsla(360, 0%, 20%, 1);
+    --color-dark-grey: hsla(360, 0%, 10%, 1);
+
+    --background-main: var(--color-light-main);
+    --background-grey: var(--color-light-grey);
+
+    --text-color: var(--color-dark-main);
+
+    --border-width: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-main: var(--color-dark-main);
+        --background-grey: var(--color-dark-grey);
+
+        --text-color: var(--color-light-main);
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    --border-color: transparent;
+
+    box-shadow: 0 0 0 calc(var(--border-width) / 2) var(--border-color) inset, 0 0 0 calc(var(--border-width) / 2) var(--border-color);
+}
+
+body {
+    font-size: 16px;
+    font-family: monospace;
+    color: var(--text-color);
+
+    background-color: var(--background-main);
+
+    --border-color: var(--text-color);
+}
+
+main {
+    display: contents;
+}
+
+img {
+    width: min(100%, 500px);
+    --border-color: var(--text-color);
+}
+
+body.main {
+    display: grid;
+
+    grid-template-rows: auto 100vh auto auto;
+    grid-template-areas:
+        "header"
+        "stuff"
+        "footer";
+}
+
+nav.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    --border-color: var(--text-color);
+    --border-width: 3px;
+    padding: calc(var(--spacing-small) + var(--border-width));
+    margin: var(--sapcing-medium)
+}
+
+header.main {
+    grid-area: header;
+}
