@@ -1,13 +1,38 @@
+/*========================
+    0. Table of contents
+    1. Variables & reset
+        1.1. Variables
+        1.2. Reset
+    2. Elements
+        2.1. General
+        2.2. Typography
+        2.3. Forms
+    3. Layouts
+        3.1. Main
+        3.2. About
+        3.3. Stuff
+========================*/
+
+
+
+/*========================
+    1. Variables & reset:
+========================*/
+
+/*========================
+    1.1. Variables:
+========================*/
+
 :root {
     --spacing-small: 1rem;
     --spacing-medium: 2rem;
     --spacing-big: 4rem;
 
-    --color-light-main: hsla(360, 0%, 90%, 1);
-    --color-light-grey: hsla(360, 0%, 80%, 1);
+    --color-light-main: hsl(360 0% 95% / 1);
+    --color-light-grey: hsl(360 0% 85% / 1);
 
-    --color-dark-main: hsla(360, 0%, 20%, 1);
-    --color-dark-grey: hsla(360, 0%, 10%, 1);
+    --color-dark-main: hsl(360 0% 10% / 1);
+    --color-dark-grey: hsl(360 0% 20% / 1);
 
     --background-main: var(--color-light-main);
     --background-grey: var(--color-light-grey);
@@ -15,6 +40,7 @@
     --text-color: var(--color-dark-main);
 
     --border-width: 3px;
+    --border-color: var(--color-dark-main);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +49,15 @@
         --background-grey: var(--color-dark-grey);
 
         --text-color: var(--color-light-main);
+
+        --border-color: var(--color-light-main);
     }
 }
+
+
+/*========================
+    1.2. Reset:
+========================*/
 
 *,
 *::before,
@@ -33,52 +66,249 @@
     padding: 0;
 
     box-sizing: border-box;
-
-    --border-color: transparent;
-
-    box-shadow: 0 0 0 calc(var(--border-width) / 2) var(--border-color) inset, 0 0 0 calc(var(--border-width) / 2) var(--border-color);
 }
+
+body,
+main,
+section,
+header,
+div,
+aside {
+    display: grid;
+}
+
+::before,
+::after,
+p,
+a,
+button,
+input {
+    display: inline-block;
+}
+
+
+/*========================
+    2. Elements:
+========================*/
+
+/*========================
+    2. General:
+========================*/
 
 body {
     font-size: 16px;
     font-family: monospace;
     color: var(--text-color);
+    line-height: 1.5;
 
     background-color: var(--background-main);
 
-    --border-color: var(--text-color);
+    grid-template-columns: 1fr 2rem;
+    grid-template-areas:
+        "main aside"
+        "footer aside";
 }
 
 main {
-    display: contents;
+    grid-area: main;
 }
 
 img {
-    width: min(100%, 500px);
-    --border-color: var(--text-color);
+    vertical-align: middle;
 }
+
+aside {
+    grid-area: aside;
+    border: 1px solid red;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "menu"
+        "scrollbar"
+        "button";
+}
+
+footer {
+    grid-area: footer;
+}
+
+img:not(a > img) {
+    border: var(--border-width) solid var(--border-color)
+}
+
+hr {
+    border: none;
+    border-top: 3px solid var(--text-color);
+}
+
+
+/*========================
+    2.2. Typography:
+========================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    --size: 3rem;
+}
+
+h1 {
+    font-size: calc(var(--size) / 1);
+}
+
+h2 {
+    font-size: calc(var(--size) / 2);
+}
+
+h3 {
+    font-size: calc(var(--size) / 3);
+}
+
+h4 {
+    font-size: calc(var(--size) / 4);
+}
+
+h5 {
+    font-size: calc(var(--size) / 5);
+}
+
+h6 {
+    font-size: calc(var(--size) / 6);
+}
+
+a,
+abbr {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:not(.image, .arrow)::before {
+    content: "↗️";
+}
+
+
+/*========================
+    2.3. Forms:
+========================*/
+
+button,
+select {
+    padding: var(--spacing-small);
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--background-grey);
+    font: inherit;
+    width: min(300px, 100%);
+}
+
+
+/*========================
+    2.3. Clases:
+========================*/
+
+.spacing {
+    padding: var(--spacing-medium);
+}
+
+.spacing-vertical > * + * {
+    grid-row-gap: var(--spacing-small);
+}
+
+.spacing-horizontal > * + * {
+    grid-column-gap: var(--spacing-small);
+}
+
+
+
+/*========================
+    3. Layout:
+========================*/
+
+/*========================
+    3.1. Main:
+========================*/
 
 body.main {
-    display: grid;
 
-    grid-template-rows: auto 100vh auto auto;
-    grid-template-areas:
-        "header"
-        "stuff"
-        "footer";
 }
 
-nav.menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    --border-color: var(--text-color);
-    --border-width: 3px;
-    padding: calc(var(--spacing-small) + var(--border-width));
-    margin: var(--sapcing-medium)
+main.main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh auto;
+    grid-template-areas:
+        "header"
+        "stuff";
+    grid-gap: var(--spacing-small);
 }
 
 header.main {
     grid-area: header;
+
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+}
+
+header.main > img {
+    width: 100%;
+    height: auto;
+}
+
+header.main > div {
+
+}
+
+@media (min-width: 30em) {
+    header.main {
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    header.main > img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+section.stuff {
+    grid-area: stuff;
+    border: 1px solid teal;
+    width: 100%;
+}
+
+section.stuff > nav.filter {
+
+}
+section.stuff > nav.filter > div.category {
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+/*========================
+    3.2. About:
+========================*/
+
+body.about {
+
+}
+
+
+/*========================
+    3.3. Stuff:
+========================*/
+
+body.stuff {
+
 }
