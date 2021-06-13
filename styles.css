@@ -73,8 +73,20 @@ main,
 section,
 header,
 div,
-aside {
+aside,
+footer,
+nav,
+img {
     display: grid;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
 }
 
 ::before,
@@ -103,7 +115,7 @@ body {
 
     background-color: var(--background-main);
 
-    grid-template-columns: 1fr 2rem;
+    grid-template-columns: minmax(0, 1fr) 3rem;
     grid-template-areas:
         "main aside"
         "footer aside";
@@ -113,24 +125,37 @@ main {
     grid-area: main;
 }
 
-img {
-    vertical-align: middle;
-}
-
 aside {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
     grid-area: aside;
-    border: 1px solid red;
+    border: var(--border-width) solid var(--border-color);
 
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
     grid-template-areas:
         "menu"
         "scrollbar"
         "button";
+
+    background-color: var(--background-grey)
 }
 
 footer {
     grid-area: footer;
+    grid-gap: var(--spacing-small);
+    padding: var(--spacing-medium);
+}
+
+footer > nav.links {
+    grid-auto-flow: row;
+    grid-gap: inherit;
+}
+
+footer > * + *{
+    margin-top: calc(1em - 1rem);
 }
 
 img:not(a > img) {
@@ -158,33 +183,38 @@ h6 {
 }
 
 h1 {
-    font-size: calc(var(--size) / 1);
+    font-size: calc(var(--size) / 6 * 6);
 }
 
 h2 {
-    font-size: calc(var(--size) / 2);
+    font-size: calc(var(--size) / 6 * 5);
 }
 
 h3 {
-    font-size: calc(var(--size) / 3);
+    font-size: calc(var(--size) / 6 * 4);
 }
 
 h4 {
-    font-size: calc(var(--size) / 4);
+    font-size: calc(var(--size) / 6 * 3);
 }
 
 h5 {
-    font-size: calc(var(--size) / 5);
+    font-size: calc(var(--size) / 6 * 2);
 }
 
 h6 {
-    font-size: calc(var(--size) / 6);
+    font-size: calc(var(--size) / 6 * 1);
 }
 
 a,
-abbr {
+abbr{
     font-weight: bold;
     text-decoration: underline;
+}
+
+time {
+    font-weight: bold;
+
 }
 
 a {
@@ -210,26 +240,27 @@ select {
     border: var(--border-width) solid var(--border-color);
     background-color: var(--background-grey);
     font: inherit;
-    width: min(300px, 100%);
 }
 
 
 /*========================
-    2.3. Clases:
+    2.3. Classes:
 ========================*/
 
-.spacing {
-    padding: var(--spacing-medium);
+.hidden,
+[hidden] {
+    display: none;
 }
 
-.spacing-vertical > * + * {
-    grid-row-gap: var(--spacing-small);
+.sr-only {
+
 }
 
-.spacing-horizontal > * + * {
-    grid-column-gap: var(--spacing-small);
-}
 
+
+.invisible {
+    visibility: hidden;
+}
 
 
 /*========================
@@ -245,8 +276,8 @@ body.main {
 }
 
 main.main {
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(100vh, auto) auto;
     grid-template-areas:
         "header"
         "stuff";
@@ -263,14 +294,17 @@ header.main {
 header.main > img {
     width: 100%;
     height: auto;
+    background-color: yellow;
 }
 
 header.main > div {
-
+    padding: var(--spacing-medium);
 }
 
-@media (min-width: 30em) {
+@media (orientation: landscape) {
     header.main {
+        grid-area: header;
+
         grid-template-columns: auto minmax(0, 1fr);
         grid-template-rows: minmax(0, 1fr);
     }
@@ -278,22 +312,38 @@ header.main > div {
     header.main > img {
         width: auto;
         height: 100%;
+        background-color: yellow;
     }
+
+
+
 }
 
 section.stuff {
     grid-area: stuff;
-    border: 1px solid teal;
-    width: 100%;
 }
 
-section.stuff > nav.filter {
-
-}
-section.stuff > nav.filter > div.category {
-    grid-template-columns: 1fr 1fr;
+section.stuff > nav.filter > * + * {
+    margin-top: 1em;
 }
 
+nav.category {
+    grid-gap: var(--spacing-small);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+}
+div.container {
+    grid-gap: var(--spacing-small);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+}
+
+article {
+    border: var(--border-width) solid var(--border-color);
+    padding: var(--spacing-medium);
+}
+
+article > * + * {
+    margin-top: 1em;
+}
 
 
 /*========================
