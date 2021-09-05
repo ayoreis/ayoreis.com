@@ -18,5 +18,9 @@
   "homepage": "https://github.com/ayoreis/ayoreis.com#readme",
   "devDependencies": {
     "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4"
   }
 }
