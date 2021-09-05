@@ -1,0 +1,22 @@
+{
+  "name": "ayoreis.com",
+  "version": "1.0.0",
+  "description": "Hello, world! I am Ayo, I make stuff.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayoreis/ayoreis.com.git"
+  },
+  "author": "Ayo Reis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayoreis/ayoreis.com/issues"
+  },
+  "homepage": "https://github.com/ayoreis/ayoreis.com#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
