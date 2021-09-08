@@ -24,15 +24,6 @@ const postSchema = new Schema({
     }
 }, {timestamps: true})
 
-fs.readFile('./authentication.json', (err, data) => {
-    if (err) {
-        console.error(err)
-        return
-    }
+const Post = mongoose.model('Post', postSchema)
 
-    const authentication = JSON.parse(data)
-
-    const Post = mongoose.model(authentication.collection, postSchema) //
-
-    module.exports = Post
-})
+module.exports = Post
