@@ -10,7 +10,7 @@ const Blog = require('./models/post')
 const app = express()
 app.set('view engine', 'ejs')
 
-let authentication, dbURI
+let authentication, databaseURI
 
 fs.readFile('./authentication.json', (err, data) => {
     if (err) {
