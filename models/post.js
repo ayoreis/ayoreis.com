@@ -24,7 +24,7 @@ const postSchema = new Schema({
     }
 }, {timestamps: true})
 
-fs.readFile('./authentication.json', (err, data) => {
+fs.readFile('../authentication.json', (err, data) => {
     if (err) {
         console.error(err)
         return
