@@ -20,6 +20,10 @@ app.get('/', (request, response) => {
     response.render('index', {title: "Ayo Reis."})
 })
 
+app.get('/about', (request, response) => {
+    response.render('about', {title: "About."})
+})
+
 
 
 let authentication, databaseURI
