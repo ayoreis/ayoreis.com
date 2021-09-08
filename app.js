@@ -10,6 +10,12 @@ const Post = require('./models/post')
 const app = express()
 app.set('view engine', 'ejs')
 
+app.use((request, response, next) => {
+    express.static('/public')
+    
+    next()
+})
+
 app.get('/', (request, response) => {
     response.render('index')
 })
