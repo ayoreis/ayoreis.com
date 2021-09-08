@@ -1,6 +1,14 @@
+'use strict'
+
+
+
 const express = require('express')
 const fs = require('fs')
 const mongoose = require('mongoose')
+const Blog = require('./models/blog.mjs')
+
+const app = express()
+app.set('view engine', 'ejs')
 
 let authentication, dbURI
 
@@ -11,20 +19,17 @@ fs.readFile('./authentication.json', (err, data) => {
     }
 
     authentication = JSON.parse(data)
-    dbURI = `mongodb+srv://${authentication.user}:${authentication.password}@cluster.alfss.mongodb.net/${authentication.database}?retryWrites=true&w=majority`
+    databaseURI = `mongodb+srv://${authentication.user}:${authentication.password}@cluster.alfss.mongodb.net/${authentication.database}?retryWrites=true&w=majority`
 
-    mongoose.connect(dbURI)
+    mongoose.connect(databaseURI)
+    .then(() => {
+        app.listen(3000)
+    })
 })
 
+app.get('/post', (request, response) => {
 
-
-const app = express()
-
-app.set('view engine', 'ejs')
-
-app.listen(3000)
-
-
+})
 
 app.get('/', (request, response) => {
     response.render('index')
