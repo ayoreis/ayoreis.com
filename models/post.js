@@ -19,7 +19,7 @@ const postSchema = new Schema({
     },
 
     content: {
-        type: Sting,
+        type: String,
         required: true
     }
 }, {timestamps: true})
