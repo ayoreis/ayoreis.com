@@ -24,6 +24,9 @@ app.get('/about', (request, response) => {
     response.render('about', {title: "About."})
 })
 
+app.get('/post', (request, response) => {
+    response.render('post', {title: "Post."})
+})
 
 
 let authentication, databaseURI
