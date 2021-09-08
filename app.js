@@ -5,7 +5,7 @@
 const express = require('express')
 const fs = require('fs')
 const mongoose = require('mongoose')
-const Blog = require('./models/blog.mjs')
+const Blog = require('./models/post')
 
 const app = express()
 app.set('view engine', 'ejs')
