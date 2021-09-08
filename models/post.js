@@ -34,5 +34,5 @@ fs.readFile('./authentication.json', (err, data) => {
 
     const Post = mongoose.model(authentication.collection, postSchema) //
 
-    module.exports = postSchema
+    module.exports = Post
 })
