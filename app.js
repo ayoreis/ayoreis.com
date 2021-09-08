@@ -5,10 +5,16 @@
 const express = require('express')
 const fs = require('fs')
 const mongoose = require('mongoose')
-const Blog = require('./models/post')
+const Post = require('./models/post')
 
 const app = express()
 app.set('view engine', 'ejs')
+
+app.get('/', (request, response) => {
+    response.render('index')
+})
+
+
 
 let authentication, databaseURI
 
@@ -25,12 +31,4 @@ fs.readFile('./authentication.json', (err, data) => {
     .then(() => {
         app.listen(3000)
     })
-})
-
-app.get('/post', (request, response) => {
-
-})
-
-app.get('/', (request, response) => {
-    response.render('index')
 })
