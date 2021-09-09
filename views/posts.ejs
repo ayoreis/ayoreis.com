@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/nav') %>
+
+        <header>
+            <h1>I make <a href="/posts">stuff</a>.</h1>
+        </header>
+
+        <%posts.forEach( post => {%>
+
+            <article>
+                <h2><%=post.title%></h2>
+                <p><%=post.description%></p>
+            </article>
+
+        <%})%>
+
+    </body>
+</html>

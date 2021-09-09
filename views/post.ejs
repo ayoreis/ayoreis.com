@@ -4,7 +4,11 @@
     <%- include('partials/head') %>
 
     <body>
-        <form action="/post" method="post">
+
+        <%- include('partials/nav') %>
+
+        <form action="/posts" method="post">
+
             <div>
                 <label for="title">Title</label>
                 <input
@@ -29,7 +33,9 @@
                     name="content">
             </div>
 
-            <button type="submit" name="button">Submit</button>
+            <a href="/">Cancel.</a>
+            <button>Submit.</button>
+
         </form>
     </body>
 </html>
