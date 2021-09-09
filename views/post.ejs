@@ -4,6 +4,32 @@
     <%- include('partials/head') %>
 
     <body>
-        
+        <form action="/post" method="post">
+            <div>
+                <label for="title">Title</label>
+                <input
+                    required
+                    type="text"
+                    name="title">
+            </div>
+
+            <div>
+                <label for="description">Description</label>
+                <input
+                    required
+                    type="text"
+                    name="description">
+            </div>
+
+            <div>
+                <label for="content">Content</label>
+                <input
+                    required
+                    type="text"
+                    name="content">
+            </div>
+
+            <button type="submit" name="button">Submit</button>
+        </form>
     </body>
 </html>
