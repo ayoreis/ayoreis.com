@@ -11,12 +11,16 @@
             <h1>I make <a href="/posts">stuff</a>.</h1>
         </header>
 
-        <%posts.forEach( post => {%>
+        <%posts.forEach(post => {%>
 
             <article>
-                <h2><%=post.title%></h2>
-                <p><%=post.description%></p>
+                <h2><%= post.title %></h2>
+                <p><%= post.description %></p>
+                <a href="/posts/<%= post._id %>">↗</a>
             </article>
+            <%if(posts[posts.length - 1] !== post){%>
+            <hr>
+            <%}%>
 
         <%})%>
 
