@@ -40,7 +40,7 @@ app.get('/post', (request, response) => {
 app.get('/posts', (request, response) => {
     Post.find().sort({ createdAt: -1 })
 
-    .then((result) => {
+    .then( result => {
         response.render('posts', {title: "Posts.", posts: result})
     })
 
@@ -54,6 +54,17 @@ app.post('/posts', (request, response) => {
 
     .then(() => {
         response.redirect('/posts')
+    })
+
+    .catch(console.error)
+})
+
+app.get('/posts/:id', (request, response) => {
+    const id = request.params.id
+    Post.findById(id)
+
+    .then( result => {
+        response.render('single', {title: result.title, post: result})
     })
 
     .catch(console.error)
