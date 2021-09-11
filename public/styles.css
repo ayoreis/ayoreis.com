@@ -9,3 +9,15 @@ body {
     font-family: monospace;
     font-size: 18px;
 }
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button.delete {
+    border: none;
+    border-radius: .5rem;
+    background-color: crimson;
+    padding: .5rem 1rem;
+}
