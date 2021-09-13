@@ -18,6 +18,11 @@ button {
 button.delete {
     border: none;
     border-radius: .5rem;
-    background-color: crimson;
+    background-color: hsl(0, 100%, 63%);
     padding: .5rem 1rem;
+}
+
+article {
+    border: 5px solid grey;
+    padding: 1rem;
 }
