@@ -6,10 +6,9 @@ const express = require('express')
 const fs = require('fs')
 const mongoose = require('mongoose')
 const postRouter = require('./routes/post.js')
+const sha512 = require('js-sha512')
 
 const app = express()
-
-
 
 // Settings
 app.set('view engine', 'ejs')
