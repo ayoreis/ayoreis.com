@@ -41,7 +41,14 @@ app.get('/posts', (request, response) => {
     Post.find().sort({ createdAt: -1 })
 
     .then( result => {
-        response.render('posts', {title: "Posts.", posts: result})
+        response.render(
+            'posts',
+            {
+                title: "Posts.",
+                posts: result,
+                scripts: ['delete.js']
+            }
+        )
     })
 
     .catch(console.error)
@@ -61,6 +68,7 @@ app.post('/posts', (request, response) => {
 
 app.get('/posts/:id', (request, response) => {
     const id = request.params.id
+
     Post.findById(id)
 
     .then( result => {
@@ -70,6 +78,17 @@ app.get('/posts/:id', (request, response) => {
     .catch(console.error)
 })
 
+app.delete('/posts/:id', (request, response) => {
+    const id = request.params.id
+
+    Post.findByIdAndDelete(id)
+
+    .then( result => {
+        response.json({redirect: '/posts'})
+    })
+
+    .catch(console.error)
+})
 
 
 // Database
