@@ -5,7 +5,7 @@
 const express = require('express')
 const fs = require('fs')
 const mongoose = require('mongoose')
-const Post = require('./models/post')
+const postRouter = require('./routes/post.js')
 
 const app = express()
 
@@ -29,67 +29,7 @@ app.get('/about', (request, response) => {
     response.render('about', {title: "About."})
 })
 
-
-
-// Post routes
-
-app.get('/post', (request, response) => {
-    response.render('post', {title: "Post."})
-})
-
-app.get('/posts', (request, response) => {
-    Post.find().sort({ createdAt: -1 })
-
-    .then( result => {
-        response.render(
-            'posts',
-            {
-                title: "Posts.",
-                posts: result,
-                scripts: ['delete.js']
-            }
-        )
-    })
-
-    .catch(console.error)
-})
-
-app.post('/posts', (request, response) => {
-    const post = new Post(request.body)
-
-    post.save()
-
-    .then(() => {
-        response.redirect('/posts')
-    })
-
-    .catch(console.error)
-})
-
-app.get('/posts/:id', (request, response) => {
-    const id = request.params.id
-
-    Post.findById(id)
-
-    .then( result => {
-        response.render('single', {title: result.title, post: result})
-    })
-
-    .catch(console.error)
-})
-
-app.delete('/posts/:id', (request, response) => {
-    const id = request.params.id
-
-    Post.findByIdAndDelete(id)
-
-    .then( result => {
-        response.json({redirect: '/posts'})
-    })
-
-    .catch(console.error)
-})
-
+app.use(postRouter)
 
 // Database
 let authentication, databaseURI
