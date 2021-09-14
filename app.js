@@ -33,11 +33,8 @@ app.use(postRouter)
 // Database
 let authentication, databaseURI
 
-fs.readFile('./authentication.json', (err, data) => {
-    if (err) {
-        console.error(err)
-        return
-    }
+fs.readFile('./authentication.json', (error, data) => {
+    if (error !== null) throw error
 
     authentication = JSON.parse(data)
     databaseURI = `mongodb+srv://${authentication.user}:${authentication.password}@cluster.alfss.mongodb.net/${authentication.database}?retryWrites=true&w=majority`
