@@ -34,12 +34,28 @@ app.use(postRoutes)
 
 
 // Setup, Authentication, & Database
+let config
+
+app.get('/authenticate', (request, response) => {
+    response.render('authenticate', {title: "🕵️ Authenticate."})
+})
+
+app.post('/authenticate', (request, response) => {
+    const password = sha512(request.body.password)
+
+    if (config.password === password) {
+        console.log("Rigth password!")
+    }
+
+    response.redirect('/authenticate')
+})
+
 const configFile = './config.json'
 
 fs.readFile(configFile, (error, data) => {
     if (error !== null) throw error
 
-    const config = JSON.parse(data)
+    config = JSON.parse(data)
     const databaseURI = `mongodb+srv://${config.database.user}:${config.database.password}@cluster.alfss.mongodb.net/${config.database.database}?retryWrites=true&w=majority`
 
     mongoose.connect(databaseURI)
