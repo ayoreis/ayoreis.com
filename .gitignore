@@ -106,3 +106,4 @@ dist
 # Private files
 
 authentication.json
+config.json
