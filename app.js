@@ -1,22 +1,24 @@
 'use strict'
 
 
+const fs = require('fs')
 
 const express = require('express')
-const fs = require('fs')
 const mongoose = require('mongoose')
-const postRoutes = require('./routes/post.js')
 const sha512 = require('js-sha512')
 
+const postRoutes = require('./routes/post.js')
+
 const app = express()
+
 
 // Settings
 app.set('view engine', 'ejs')
 
+
 // Middleware
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
-
 
 
 // Routes
@@ -29,7 +31,6 @@ app.get('/about', (request, response) => {
 })
 
 app.use(postRoutes)
-
 
 
 // Setup, Authentication, & Database
