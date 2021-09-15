@@ -30,7 +30,17 @@ app.get('/about', (request, response) => {
 
 app.use(postRouter)
 
-// Database
+
+
+// Setup, Authentication, & Database
+const configFile = './config.json'
+
+fs.readFile(configFile, (error, data) => {
+    if (error !== null) throw error
+
+    const config = JSON.parse(data)
+})
+
 let authentication, databaseURI
 
 fs.readFile('./authentication.json', (error, data) => {
@@ -40,6 +50,7 @@ fs.readFile('./authentication.json', (error, data) => {
     databaseURI = `mongodb+srv://${authentication.user}:${authentication.password}@cluster.alfss.mongodb.net/${authentication.database}?retryWrites=true&w=majority`
 
     mongoose.connect(databaseURI)
+
     .then(() => {
         app.listen(3000)
     })
