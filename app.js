@@ -40,7 +40,7 @@ fs.readFile(configFile, (error, data) => {
     if (error !== null) throw error
 
     const config = JSON.parse(data)
-    const databaseURI = `mongodb+srv://${config.user}:${config.password}@cluster.alfss.mongodb.net/${config.database}?retryWrites=true&w=majority`
+    const databaseURI = `mongodb+srv://${config.database.user}:${config.database.password}@cluster.alfss.mongodb.net/${config.database.database}?retryWrites=true&w=majority`
 
     mongoose.connect(databaseURI)
 
