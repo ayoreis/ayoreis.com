@@ -5,7 +5,7 @@
 const express = require('express')
 const fs = require('fs')
 const mongoose = require('mongoose')
-const postRouter = require('./routes/post.js')
+const postRoutes = require('./routes/post.js')
 const sha512 = require('js-sha512')
 
 const app = express()
@@ -28,7 +28,7 @@ app.get('/about', (request, response) => {
     response.render('about', {title: "About."})
 })
 
-app.use(postRouter)
+app.use(postRoutes)
 
 
 
@@ -39,15 +39,7 @@ fs.readFile(configFile, (error, data) => {
     if (error !== null) throw error
 
     const config = JSON.parse(data)
-})
-
-let authentication, databaseURI
-
-fs.readFile('./authentication.json', (error, data) => {
-    if (error !== null) throw error
-
-    authentication = JSON.parse(data)
-    databaseURI = `mongodb+srv://${authentication.user}:${authentication.password}@cluster.alfss.mongodb.net/${authentication.database}?retryWrites=true&w=majority`
+    const databaseURI = `mongodb+srv://${config.user}:${config.password}@cluster.alfss.mongodb.net/${config.database}?retryWrites=true&w=majority`
 
     mongoose.connect(databaseURI)
 
