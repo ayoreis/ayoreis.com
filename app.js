@@ -46,6 +46,11 @@ app.post('/authenticate', (request, response) => {
     response.send(sha512(request.body) === config.password)
 })
 
+app.use('/', (request, response) => {
+    response.status(404)
+    response.render('404', {title: "404.", url: request.path})
+})
+
 
 let config
 const configFile = './config.json'
