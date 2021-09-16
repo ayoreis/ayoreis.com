@@ -1,6 +1,7 @@
 'use strict'
 
 
+// Require packages.
 const fs = require('fs')
 
 const express = require('express')
@@ -12,16 +13,18 @@ const postRoutes = require('./routes/post.js')
 const app = express()
 
 
-// Settings
+// Settings.
 app.set('view engine', 'ejs')
 
 
-// Middleware
+// Middleware.
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(express.text())
 
 
-// Routes
+// Routes.
 app.get('/', (request, response) => {
     response.render('index', {title: "Ayo Reis."})
 })
@@ -33,29 +36,25 @@ app.get('/about', (request, response) => {
 app.use(postRoutes)
 
 
-// Setup, Authentication, & Database
-let config
-
+// Setup, Authentication, & Database.
 app.get('/authenticate', (request, response) => {
-    response.render('authenticate', {title: "🕵️ Authenticate."})
+    response.render('authenticate', {title: "🕵️ Authenticate.", scripts: ['auth.js']})
 })
+
 
 app.post('/authenticate', (request, response) => {
-    const password = sha512(request.body.password)
-
-    if (config.password === password) {
-        console.log("Rigth password!")
-    }
-
-    response.redirect('/authenticate')
+    response.send(sha512(request.body) === config.password)
 })
 
+
+let config
 const configFile = './config.json'
 
 fs.readFile(configFile, (error, data) => {
     if (error !== null) throw error
 
     config = JSON.parse(data)
+
     const databaseURI = `mongodb+srv://${config.database.user}:${config.database.password}@cluster.alfss.mongodb.net/${config.database.database}?retryWrites=true&w=majority`
 
     mongoose.connect(databaseURI)

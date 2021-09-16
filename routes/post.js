@@ -1,15 +1,27 @@
 const express = require('express')
+const fs = require('fs')
 const Post = require('../models/post')
 const router = express.Router()
+const sha512 = require('js-sha512');
+
+let config
+const configFile = './config.json'
+
+fs.readFile(configFile, (error, data) => {
+    if (error !== null) throw error
+
+    config = JSON.parse(data)
+})
+
 
 router.get('/post', (request, response) => {
-    response.render('post', {title: "Post."})
+    response.render('post', {title: "Post.", scripts: ['create.js']})
 })
 
 router.get('/posts', (request, response) => {
     Post.find().sort({ createdAt: -1 })
 
-    .then( result => {
+    .then(result => {
         response.render(
             'posts',
             {
@@ -23,17 +35,25 @@ router.get('/posts', (request, response) => {
     .catch(console.error)
 })
 
+
 router.post('/posts', (request, response) => {
-    const post = new Post(request.body)
+    if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
+        const post = new Post({
+            title: request.body.title,
+            description: request.body.description,
+            content: request.body.content
+        })
 
-    post.save()
+        post.save()
 
-    .then(() => {
-        response.redirect('/posts')
-    })
+        .then(console.log)
 
-    .catch(console.error)
+        .catch(console.error)
+    } else {
+        console.error(`⚠️ Authenticate first! https://ayoreis.com/authenticate`)
+    }
 })
+
 
 router.get('/posts/:id', (request, response) => {
     const id = request.params.id
@@ -50,13 +70,15 @@ router.get('/posts/:id', (request, response) => {
 router.delete('/posts/:id', (request, response) => {
     const id = request.params.id
 
-    Post.findByIdAndDelete(id)
+    if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
+        Post.findByIdAndDelete(id)
 
-    .then( result => {
-        response.json({redirect: '/posts'})
-    })
+        .then(console.log)
 
-    .catch(console.error)
+        .catch(console.error)
+    } else {
+        console.error(`⚠️ Authenticate first! https://ayoreis.com/authenticate`)
+    }
 })
 
 module.exports = router
