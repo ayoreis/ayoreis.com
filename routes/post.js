@@ -18,23 +18,6 @@ router.get('/post', (request, response) => {
     response.render('post', {title: "Post.", scripts: ['create.js']})
 })
 
-router.get('/posts', (request, response) => {
-    Post.find().sort({ createdAt: -1 })
-
-    .then(result => {
-        response.render(
-            'posts',
-            {
-                title: "Posts.",
-                posts: result,
-                scripts: ['delete.js']
-            }
-        )
-    })
-
-    .catch(console.error)
-})
-
 
 router.post('/posts', (request, response) => {
     if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {

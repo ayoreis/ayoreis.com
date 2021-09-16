@@ -23,10 +23,24 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(express.text())
 
-
+const Post = require('./models/post')
 // Routes.
 app.get('/', (request, response) => {
-    response.render('index', {title: "Ayo Reis."})
+    Post.find().sort({ createdAt: -1 })
+
+    .then(result => {
+        response.render(
+            'posts',
+            {
+                title: "Posts.",
+                posts: result,
+                scripts: ['delete.js']
+            }
+        )
+        response.render('index', {title: "Ayo Reis.", posts: result, scripts: ['delete.js']})
+    })
+
+    .catch(console.error)
 })
 
 app.get('/about', (request, response) => {
