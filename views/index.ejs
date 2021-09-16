@@ -20,19 +20,16 @@
                     <h2>I make stuff.</h2>
                 </header>
                 <div>
-                    <%posts.forEach(post => {%>
+                <%posts.forEach(post => {%>
 
-                        <article>
-                            <h2><%= post.title %></h2>
-                            <p><%= post.description %></p>
-                            <a href="/posts/<%= post._id %>">↗</a>
-                            <button class="delete" data-post="<%= post.id %>">Delete.</button>
-                        </article>
-                        <%if(posts[posts.length - 1] !== post){%>
-                        <hr>
-                        <%}%>
-
-                    <%})%>
+                    <article>
+                        <h2><%= post.title %></h2>
+                        <p><%= post.description %></p>
+                        <a href="/posts/<%= post._id %>">↗</a>
+                        <button class="delete" data-post="<%= post.id %>">Delete.</button>
+                    </article>
+                    
+                <%})%>
                 </div>
             </section>
         </main>
