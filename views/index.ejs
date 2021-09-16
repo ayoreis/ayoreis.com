@@ -28,10 +28,13 @@
                         <a href="/posts/<%= post._id %>">↗</a>
                         <button class="delete" data-post="<%= post.id %>">Delete.</button>
                     </article>
-                    
+
                 <%})%>
                 </div>
             </section>
         </main>
+
+        <%- include('partials/footer') %>
+
     </body>
 </html>
