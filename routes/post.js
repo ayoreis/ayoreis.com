@@ -46,7 +46,7 @@ router.post('/posts', (request, response) => {
 
         post.save()
 
-        .then(console.log)
+        .then()
 
         .catch(console.error)
     } else {
@@ -73,7 +73,7 @@ router.delete('/posts/:id', (request, response) => {
     if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
         Post.findByIdAndDelete(id)
 
-        .then(console.log)
+        .then()
 
         .catch(console.error)
     } else {
