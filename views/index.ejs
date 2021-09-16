@@ -7,30 +7,32 @@
 
         <%- include('partials/nav') %>
 
-        <header class="main">
-            <h1>Hello, world! I am <a href="/about">Ayo</a>, I make <a href="#posts">stuff</a>.</h1>
-            <a href="#posts">↓</a>
-        </header>
-
-        <section class="posts">
-            <header class="posts">
-                <h2>I make stuff.</h2>
+        <main class="main">
+            <header class="main">
+                <h1>Hello, world! I am <a href="/about">Ayo</a>, I make <a href="#posts">stuff</a>.</h1>
+                <a href="#posts">↓</a>
             </header>
-            <div>
-                <%posts.forEach(post => {%>
 
-                    <article>
-                        <h2><%= post.title %></h2>
-                        <p><%= post.description %></p>
-                        <a href="/posts/<%= post._id %>">↗</a>
-                        <button class="delete" data-post="<%= post.id %>">Delete.</button>
-                    </article>
-                    <%if(posts[posts.length - 1] !== post){%>
-                    <hr>
-                    <%}%>
+            <section class="posts">
+                <header class="posts">
+                    <h2>I make stuff.</h2>
+                </header>
+                <div>
+                    <%posts.forEach(post => {%>
 
-                <%})%>
-            </div>
-        </section>
+                        <article>
+                            <h2><%= post.title %></h2>
+                            <p><%= post.description %></p>
+                            <a href="/posts/<%= post._id %>">↗</a>
+                            <button class="delete" data-post="<%= post.id %>">Delete.</button>
+                        </article>
+                        <%if(posts[posts.length - 1] !== post){%>
+                        <hr>
+                        <%}%>
+
+                    <%})%>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
