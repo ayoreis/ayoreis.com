@@ -42,13 +42,15 @@
                         <h2><%= post.title %></h2>
                         <p><%= post.description %></p>
                         <a class="arrow arrow--right" href="/posts/<%= post._id %>"></a>
-                        <button class="delete" data-post="<%= post.id %>">Delete.</button>
+                        <button class="delete" data-post="<%= post._id %>">Delete.</button>
                     </article>
 
                 <%})%>
                 </div>
             </section>
         </main>
+
+        <hr>
 
         <%- include('partials/footer') %>
 
