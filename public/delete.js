@@ -5,10 +5,10 @@
 const buttons = document.querySelectorAll('button.delete')
 
 buttons.forEach( button => {
-    const uri = `/posts/${button.dataset.post}`
+    const post = `/posts/${button.dataset.post}`
 
     button.addEventListener('click', event => {
-        fetch(uri, {
+        fetch(post, {
             method: 'delete'
         })
 
