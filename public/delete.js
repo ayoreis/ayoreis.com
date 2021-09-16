@@ -5,16 +5,14 @@
 const buttons = document.querySelectorAll('button.delete')
 
 buttons.forEach( button => {
-    const post = `/posts/${button.dataset.post}`
-
     button.addEventListener('click', event => {
-        fetch(post, {
+        fetch(`/posts/${button.dataset.post}`, {
             method: 'delete'
         })
 
         .then( response => response.json())
 
-        .then( response => window.location.href = response.redirect)
+        .then( response => location.href = response.redirect)
 
         .catch(console.error)
     })
