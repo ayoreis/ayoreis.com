@@ -11,13 +11,29 @@
 
         <main class="main">
             <header class="main">
-                <h1>Hello, world! I am <a href="/about">Ayo</a>, I make <a href="#posts">stuff</a>.</h1>
+                <h1>Hello, world! <br> I am <a href="/about">Ayo</a>, <br> I make <a href="#posts">stuff</a>.</h1>
                 <a class="arrow arrow--down" href="#posts"></a>
             </header>
 
             <section class="posts">
                 <header class="posts">
                     <h2>I make stuff.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta maxime est esse natus illum consequuntur.</p>
+                    <nav class="filter">
+                        <div class="search">
+                            <label for="search">🔎 Search.</label>
+                            <input id="search" type="search" name="search" placeholder="...">
+                        </div>
+                        <div class="order">
+                            <label for="order"></label>
+                            <select name="order" id="order">
+                                <option value="volvo">A - Z</option>
+                                <option value="saab">Z - A</option>
+                                <option value="mercedes">Newest - Oldest</option>
+                                <option value="audi">Oldest - Newest</option>
+                            </select>
+                        </div>
+                    </nav>
                 </header>
                 <div class="container">
                 <%posts.forEach(post => {%>
