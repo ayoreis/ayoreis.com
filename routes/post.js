@@ -2,7 +2,7 @@ const express = require('express')
 const fs = require('fs')
 const Post = require('../models/post')
 const router = express.Router()
-const sha512 = require('js-sha512');
+const sha512 = require('js-sha512')
 
 const config = JSON.parse(fs.readFileSync('./config.json'))
 
