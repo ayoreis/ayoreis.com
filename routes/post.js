@@ -29,7 +29,7 @@ router.post('/posts', (request, response) => {
 })
 
 router.get('/posts/:slug', (request, response) => {
-    Post.find({slug: request.params.slug})
+    Post.findOne({slug: request.params.slug})
 
     .then(result => {
         response.render('single', {title: result.title, post: result})
