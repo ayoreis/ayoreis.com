@@ -28,8 +28,8 @@ router.post('/posts', (request, response) => {
     }
 })
 
-router.get('/posts/:id', (request, response) => {
-    Post.find({id: request.params.id})
+router.get('/posts/:slug', (request, response) => {
+    Post.find({slug: request.params.slug})
 
     .then(result => {
         response.render('single', {title: result.title, post: result})
@@ -38,10 +38,10 @@ router.get('/posts/:id', (request, response) => {
     .catch(console.error)
 })
 
-router.delete('/posts/:id', (request, response) => {
+router.delete('/posts/:slug', (request, response) => {
 
     if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
-        Post.find({id: request.params.id}).remove()
+        Post.find({slug: request.params.slug}).remove()
 
         .then()
 
