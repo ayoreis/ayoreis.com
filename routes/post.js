@@ -41,7 +41,7 @@ router.get('/posts/:slug', (request, response) => {
 router.delete('/posts/:slug', (request, response) => {
 
     if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
-        Post.find({slug: request.params.slug}).remove()
+        Post.find({slug: request.params.slug}).deleteOne()
 
         .then()
 
