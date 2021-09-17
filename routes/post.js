@@ -7,7 +7,7 @@ const sha512 = require('js-sha512')
 const config = JSON.parse(fs.readFileSync('./config.json'))
 
 router.get('/post', (request, response) => {
-    response.render('post', {title: "Post.", scripts: ['create.js']})
+    response.render('post', {title: "Post.", scripts: ['post.js']})
 })
 
 router.post('/posts', (request, response) => {
