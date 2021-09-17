@@ -1,7 +1,7 @@
 'use strict'
 
 
-// Require packages.
+// Packages.
 const fs = require('fs')
 
 const express = require('express')
@@ -10,7 +10,11 @@ const sha512 = require('js-sha512')
 
 const postRoutes = require('./routes/post.js')
 
+
+// Variables.
 const app = express()
+
+const config = JSON.parse(fs.readFileSync('./config.json'))
 
 
 // Settings.
@@ -24,6 +28,8 @@ app.use(express.json())
 app.use(express.text())
 
 const Post = require('./models/post')
+
+
 // Routes.
 app.get('/', (request, response) => {
     Post.find().sort({ createdAt: -1 })
@@ -42,7 +48,7 @@ app.get('/about', (request, response) => {
 app.use(postRoutes)
 
 
-// Setup, Authentication, & Database.
+// Authentication & Database.
 app.get('/authenticate', (request, response) => {
     response.render('authenticate', {title: "🕵️ Authenticate.", scripts: ['auth.js']})
 })
@@ -57,20 +63,10 @@ app.use('/', (request, response) => {
     response.render('404', {title: "404.", url: request.path})
 })
 
+const databaseURI = `mongodb+srv://${config.database.user}:${config.database.password}@cluster.alfss.mongodb.net/${config.database.database}?retryWrites=true&w=majority`
 
-let config
-const configFile = './config.json'
+mongoose.connect(databaseURI)
 
-fs.readFile(configFile, (error, data) => {
-    if (error !== null) throw error
-
-    config = JSON.parse(data)
-
-    const databaseURI = `mongodb+srv://${config.database.user}:${config.database.password}@cluster.alfss.mongodb.net/${config.database.database}?retryWrites=true&w=majority`
-
-    mongoose.connect(databaseURI)
-
-    .then(() => {
-        app.listen(3000)
-    })
+.then(() => {
+    app.listen(3000)
 })
