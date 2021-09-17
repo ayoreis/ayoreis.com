@@ -4,20 +4,11 @@ const Post = require('../models/post')
 const router = express.Router()
 const sha512 = require('js-sha512');
 
-let config
-const configFile = './config.json'
-
-fs.readFile(configFile, (error, data) => {
-    if (error !== null) throw error
-
-    config = JSON.parse(data)
-})
-
+const config = JSON.parse(fs.readFileSync('./config.json'))
 
 router.get('/post', (request, response) => {
     response.render('post', {title: "Post.", scripts: ['create.js']})
 })
-
 
 router.post('/posts', (request, response) => {
     if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
@@ -37,13 +28,10 @@ router.post('/posts', (request, response) => {
     }
 })
 
-
 router.get('/posts/:id', (request, response) => {
-    const id = request.params.id
+    Post.find({id: request.params.id})
 
-    Post.findById(id)
-
-    .then( result => {
+    .then(result => {
         response.render('single', {title: result.title, post: result})
     })
 
@@ -51,10 +39,9 @@ router.get('/posts/:id', (request, response) => {
 })
 
 router.delete('/posts/:id', (request, response) => {
-    const id = request.params.id
 
     if (typeof request.body.password === 'string' && sha512(request.body.password) === config.password) {
-        Post.findByIdAndDelete(id)
+        Post.find({id: request.params.id}).remove()
 
         .then()
 
