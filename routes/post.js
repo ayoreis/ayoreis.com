@@ -32,7 +32,7 @@ router.get('/posts/:slug', (request, response) => {
     Post.find({slug: request.params.slug})
 
     .then(result => {
-        response.render('single', {title: result.title, post: result})
+        response.render('single', {title: result[0].title, post: result})
     })
 
     .catch(console.error)
