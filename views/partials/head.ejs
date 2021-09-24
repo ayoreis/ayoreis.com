@@ -6,7 +6,7 @@
     <%if (typeof scripts !== 'undefined' && scripts instanceof Array) {
         scripts.forEach( script => {%>
 
-    <script src="<%= script %>" defer></script>
+    <script src="<%= script %>" type="module" defer></script>
 
         <%})
     }%>
