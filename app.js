@@ -35,7 +35,7 @@ app.get('/', (request, response) => {
     Post.find().sort({ createdAt: -1 })
 
     .then(result => {
-        response.render('index', {title: "Ayo Reis.", posts: result, scripts: ['delete.js']})
+        response.render('index', {title: "Ayo Reis.", posts: result})
     })
 
     .catch(console.error)
