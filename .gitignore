@@ -105,7 +105,3 @@ dist
 
 # Private files
 config.json
-
-# FTP
-.ftpignore
-.ftpconfig

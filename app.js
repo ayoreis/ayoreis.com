@@ -1,72 +1,52 @@
-'use strict'
+`use strict`
 
 
 // Packages.
-const fs = require('fs')
+const fs = require(`fs`)
 
-const express = require('express')
-const mongoose = require('mongoose')
-const sha512 = require('js-sha512')
-
-const postRoutes = require('./routes/post.js')
-
+const express = require(`express`)
+const mongoose = require(`mongoose`)
+const sha512 = require(`js-sha512`)
+const cookieParser = require('cookie-parser')
 
 // Variables.
 const app = express()
 
-const config = JSON.parse(fs.readFileSync('./config.json'))
+const config = {
+    user: process.argv[2],
+    password: process.argv[3]
+}
 
 
 // Settings.
-app.set('view engine', 'ejs')
+app.set(`view engine`, `ejs`)
 
 
 // Middleware.
-app.use(express.static('public'))
-app.use(express.urlencoded({extended: true}))
+app.use(cookieParser())
 app.use(express.json())
+app.use(express.raw())
+app.use(express.static(`public`))
 app.use(express.text())
-
-const Post = require('./models/post')
+app.use(express.urlencoded({ extended: true }))
 
 
 // Routes.
-app.get('/', (request, response) => {
-    Post.find().sort({ createdAt: -1 })
-
-    .then(result => {
-        response.render('index', {title: "Ayo Reis.", posts: result})
-    })
-
-    .catch(console.error)
+app.get(`/`, (request, response) => {
+    response.render(`index`, { icon: `🌈`, title: "Ayo Reis." })
 })
 
-app.get('/about', (request, response) => {
-    response.render('about', {title: "About."})
-})
-
-app.use(postRoutes)
-
-
-// Authentication & Database.
-app.get('/authenticate', (request, response) => {
-    response.render('authenticate', {title: "🕵️ Authenticate.", scripts: ['auth.js']})
-})
-
-
-app.post('/authenticate', (request, response) => {
-    response.send(sha512(request.body) === config.password)
-})
-
-app.use('/', (request, response) => {
+app.use(`/`, (request, response) => {
     response.status(404)
-    response.render('404', {title: "404.", url: request.path})
+    response.render(`404`, { icon: `🤯`, title: `404.` })
 })
 
-const databaseURI = `mongodb+srv://${config.database.user}:${config.database.password}@cluster.alfss.mongodb.net/${config.database.database}?retryWrites=true&w=majority`
+const string = `mongodb+srv://${config.user}:${config.password}@cluster.alfss.mongodb.net/types?retryWrites=true&w=majority`
 
-mongoose.connect(databaseURI)
+// mongoose.model(`Type`, require(`./models/`))
 
-.then(() => {
-    app.listen(3000)
-})
+mongoose.connect(string)
+
+    .then(() => {
+        app.listen(3000)
+    })

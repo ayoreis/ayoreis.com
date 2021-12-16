@@ -1,9 +1,45 @@
 <footer>
     <p>Made with ❤️ by <a href="//ayoreis.com">Ayo</a>.</p>
 
-    <nav class="accounts">
-        <a href="//github.com/ayoreis"><img src="../images/assets/github.svg" alt="GitHub logo."></a>
-        <a href="//stackexchange.com/users/22076130"><img src="../images/assets/stackexchange.svg" alt="Stack Exchange logo."></a>
-        <a href="//cssbattle.dev/player/ayo"><img src="../images/assets/cssbattle.svg" alt="CSS Battle logo."></a>
-    </nav>
+    <address class="profiles">
+
+        <% 
+    
+            const profiles = [
+
+                {
+                    name: `GitHub`,
+                    icon: `/images/assets/github.svg`,
+                    link: `//github.com/ayoreis`
+                },
+
+                {
+                    name: `StackExchange`,
+                    icon: `/images/assets/stackexchange.svg`,
+                    link: `//stackexchange.com/users/22076139`
+                },
+
+                {
+                    name: `CSS Battle`,
+                    icon: `/images/assets/cssbattle.svg`,
+                    link: `//cssbattle.dev/player/ayoreis`
+                },
+
+                {
+                    name: `Email`,
+                    icon: `/images/assets/email.svg`,
+                    link: `mailto:ayo.v.reis@gmail.com`
+                }
+
+            ]
+
+        %> 
+
+        <% for (profile of profiles) { %> 
+            <a href="<%= profile.link %>">
+                <img src="<%= profile.icon %>" alt="<%= profile.name %>">
+            </a>
+        <% } %>
+        
+    </address>
 </footer>

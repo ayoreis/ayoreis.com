@@ -1,28 +1,32 @@
-/* * {
+@import 'https://unpkg.com/open-props';
+
+* {
     box-sizing: border-box;
 
     margin: 0;
     padding: 0;
-} */
+}
 
 body {
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-size: 18px;
+    line-height: var(--line-height-3);
+    letter-spacing: var(--letter-spacing-3);
 }
 
-button {
-    font-family: inherit;
-    font-size: inherit;
+main { display: contents; }
+
+header,
+nav,
+footer {
+    padding: var(--size-fluid-3);
 }
 
-button.delete {
+hr {
     border: none;
-    border-radius: .5rem;
-    background-color: hsl(0, 100%, 63%);
-    padding: .5rem 1rem;
+    border-top: var(--border-size-2) solid black;
 }
 
-article {
-    border: 5px solid grey;
-    padding: 1rem;
+.emoji {
+    font-weight: 100;
 }
