@@ -1,0 +1,6 @@
+{
+	"imports": {
+		"fast": "https://deno.land/x/fast@4.0.0-beta.3/mod.ts",
+		"std/": "https://deno.land/std@0.158.0/"
+	}
+}
