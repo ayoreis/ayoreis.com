@@ -2,7 +2,7 @@
 	"importMap": "./import-map.jsonc",
 
 	"tasks": {
-		"dev": "deno run --watch --allow-net=0.0.0.0:8000 --allow-read=index.html,drawing.svg mod.ts",
+		"dev": "deno run --watch --allow-net=0.0.0.0:8000 --allow-read=index.html,drawing.svg mod.ts dev",
 		"serve": "deno run --allow-net=0.0.0.0:8000 --allow-read=index.html,drawing.svg mod.ts"
 	}
 }
