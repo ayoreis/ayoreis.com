@@ -1,38 +1,16 @@
 import { Router } from 'relax/router/router.ts'
-import { serveFile } from 'std/http/file_server.ts'
 import { serve } from 'std/http/server.ts'
 
+import handleStaticFile from './handle-static-file.ts'
+import handleHome from './handle-index.ts'
+import handleNotFound from './handle-not-found.ts'
+import handlePage from './handle-page.ts'
+
 const router = new Router()
-const isDev = Deno.args[0] === 'dev'
 
-if (isDev) {
-	router.requestMiddleware((request) => {
-		console.log(`Request to ${new URL(request.url).pathname}`)
-	})
-}
+router.get('/:staticFilepath', handleStaticFile)
+router.get('/', handleHome)
+router.get('/:id', handlePage)
+router.get('*', handleNotFound)
 
-router.responseMiddleware((request, response) => {
-	if (typeof response === 'string') {
-		try {
-			return serveFile(request, response)
-		} catch {
-			return response
-		}
-	}
-})
-
-router.get('/', () => {
-	return './index.html'
-})
-
-router.get('/drawing', () => {
-	return './drawing.svg'
-})
-
-router.get('*', () => {
-	return new Response(JSON.stringify({ status: '🤯 404' }, null, 4), {
-		status: 404,
-	})
-})
-
-serve(router.fetch, isDev ? {} : { onListen: null })
+serve(router.fetch)

@@ -1,0 +1,109 @@
+@keyframes blink {
+	from {
+		color: black;
+	}
+
+	to {
+		color: lightgrey;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	gap: 1rem;
+
+	padding: 3rem;
+
+	font-family: monospace;
+	font-size: 18px;
+
+	--grid-background-color: transparent;
+	--grid-spacing: 50px;
+	--grid-line-colour: hsl(0 0% 90%);
+	--grid-line-width: 2px;
+
+	background-image: repeating-linear-gradient(
+			var(--grid-background-color),
+			var(--grid-background-color) var(--grid-spacing),
+			var(--grid-line-colour) var(--grid-spacing),
+			var(--grid-line-colour)
+				calc(var(--grid-spacing) + var(--grid-line-width))
+		),
+		repeating-linear-gradient(
+			90deg,
+			var(--grid-background-color),
+			var(--grid-background-color) var(--grid-spacing),
+			var(--grid-line-colour) var(--grid-spacing),
+			var(--grid-line-colour)
+				calc(var(--grid-spacing) + var(--grid-line-width))
+		);
+}
+
+nav,
+main,
+footer {
+	display: contents;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+hr {
+	margin: 1rem;
+
+	border: none;
+	border-top: 3px solid black;
+}
+
+a {
+	padding: 0 1rem;
+	color: white;
+	text-decoration: underline dotted;
+	position: relative;
+}
+
+a::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: black;
+	translate: -0.5rem 2px;
+	rotate: -1deg;
+}
+
+a::selection {
+	background-color: white;
+	color: black;
+}
+
+:is(a[href^='http'], a[href^='//'])::after
+{
+	content: ' ↗';
+}
+
+::selection,
+.typewriter__paper--selected {
+	color: white;
+	background-color: black;
+}
+
+.typewriter__paper--selected + .typewriter__cursor {
+	display: none;
+}
+
+.typewriter__cursor--blinking {
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}

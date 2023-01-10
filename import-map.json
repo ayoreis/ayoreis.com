@@ -1,0 +1,8 @@
+{
+	"imports": {
+		"relax/": "https://deno.land/x/relax@0.1.0/",
+		"std/": "https://deno.land/std@0.166.0/",
+		"marked": "https://esm.sh/marked@4.2.3?bundle&dev&sourcemap&pin=v99",
+		"error-stack-parser": "https://esm.sh/error-stack-parser@2.1.4?exports=default&bundle&dev&sourcemap&pin=v99"
+	}
+}
