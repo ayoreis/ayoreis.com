@@ -1,7 +1,10 @@
 ---toml
 title = "About"
+list = false
 ---
 
 # {title}
 
-I am Ayo Reis, I am thirteen years old
+I'm Ayo Reis, I'm fourteen years old.
+
+I like to make stuff, draw, photograph, film, program, build, plant, paint...

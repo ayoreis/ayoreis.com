@@ -1,11 +1,9 @@
 import { serveFile } from 'std/http/file_server.ts'
 
-export default async function (
-	request: Request,
-	{ staticFilepath }: URLPatternComponentResult['groups'],
-) {
+export default async function (request: Request) {
 	try {
-		const path = `static/${staticFilepath}`
+		const url = new URL(request.url)
+		const path = `static/${url.pathname}`
 
 		await Deno.stat(path)
 
