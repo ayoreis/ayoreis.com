@@ -8,7 +8,7 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 ---
 
-<figure id="latest 9">
+<figure id="9">
     
 <img src="/pictures/9.1.webp" loading="lazy"/>
 <img src="/pictures/9.2.webp" loading="lazy"/>
