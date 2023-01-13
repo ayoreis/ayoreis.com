@@ -26,6 +26,8 @@ ${markdown}
 
 </article>
 
+---
+
 [< Home](/)`,
 			properties,
 		)

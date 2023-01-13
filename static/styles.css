@@ -1,3 +1,7 @@
+:root {
+	--hue: 0;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -10,14 +14,23 @@ body {
 
 	padding: 2rem;
 
-	font-family: monospace;
+	font-family: sans-serif;
 	font-size: 18px;
+
+	background-color: hsl(var(--hue) 100% 95%);
+
+	scroll-behavior: smooth;
 }
 
 nav,
 main,
 article {
 	display: contents;
+}
+
+h1,
+h2 {
+	font-weight: bolder;
 }
 
 img {
@@ -27,7 +40,7 @@ img {
 
 hr {
 	border: none;
-	border-top: 2px solid black;
+	border-top: 2px solid currentColor;
 }
 
 ul {
@@ -37,7 +50,7 @@ ul {
 a {
 	font-weight: bolder;
 	text-decoration: none;
-	color: black;
+	color: currentColor;
 }
 
 ul > li a {
@@ -50,10 +63,20 @@ nav > ul {
 
 	grid-template-columns: 1fr repeat(3, auto);
 	gap: 1rem;
+	align-items: center;
 }
 
 nav > ul > :first-child {
 	justify-self: start;
+	width: min-content;
+}
+
+nav > ul > li:first-child > a {
+	mix-blend-mode: difference;
+	color: black;
+	background-color: white;
+	display: block;
+	padding: 0.25rem 0.5rem;
 }
 
 nav > ul > li {

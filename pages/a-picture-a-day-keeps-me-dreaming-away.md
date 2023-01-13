@@ -8,9 +8,20 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 ---
 
-<figure>
+<figure id="latest 9">
     
-![](/pictures/8.webp)
+<img src="/pictures/9.1.webp" loading="lazy"/>
+<img src="/pictures/9.2.webp" loading="lazy"/>
+
+<figcaption>
+
+**Day 9** — There's happy people here. For this one I experimented drawing in a bigger scale (A3).</figcaption>
+
+</figure>
+
+<figure id="8">
+    
+<img src="/pictures/8.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -18,9 +29,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figure id="7">
     
-![](/pictures/7.webp)
+<img src="/pictures/7.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -28,9 +39,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figure id="6">
     
-![](/pictures/6.webp)
+<img src="/pictures/6.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -38,9 +49,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figure id="5">
     
-![](/pictures/5.webp)
+<img src="/pictures/5.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -48,9 +59,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figure id="4">
     
-![](/pictures/4.webp)
+<img src="/pictures/4.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -58,9 +69,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figure id="3">
     
-![](/pictures/3.webp)
+<img src="/pictures/3.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -68,9 +79,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figur id="2">
     
-![](/pictures/2.webp)
+<img src="/pictures/2.webp" loading="lazy"/>
 
 <figcaption>
 
@@ -78,9 +89,9 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figure>
+<figure id="1">
     
-![](/pictures/1.webp)
+<img src="/pictures/1.webp" loading="lazy"/>
 
 <figcaption>
 

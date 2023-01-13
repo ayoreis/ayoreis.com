@@ -33,6 +33,8 @@ export default async function () {
 
 	const source = `# Hello world! <br/> I am Ayo Reis, <br/> I make stuff.
 
+## Projects
+
 ${[...pages]
 	.map(([id, title]) => `- [${title}](/${id})`)
 	.join('\n')}

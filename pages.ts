@@ -42,7 +42,7 @@ export function createResponse(
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>${title && `${title} — `}Ayo Reis</title>
+        <title>${title ? `${title} — ` : ''}Ayo Reis</title>
         <link rel="stylesheet" href="/styles.css">
         <link href="//unpkg.com/prism-themes@1.9.0/themes/prism-one-dark.min.css" rel="stylesheet" />
         ${styles
@@ -51,9 +51,11 @@ export function createResponse(
 					`<link rel="stylesheet" href="${styleHref}" />`,
 			)
 			.join('')}
+		<script data-no-cookie data-respect-dnt async src="//cdn.splitbee.io/sb.js"></script>
         <script defer src="//unpkg.com/prismjs@1.29.0/components/prism-core.min.js"></script>
 	    <script defer src="//unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-        ${scripts
+        <script defer src="/scripts/hue.js"></script>
+		${scripts
 			.map(
 				(scriptSrc) =>
 					`<script type="module" src="${scriptSrc}"></script>`,
@@ -64,7 +66,7 @@ export function createResponse(
     <body>
         <nav>
             <ul>
-                <li><a href="/"><b>Home</b></a></li>
+                <li><a href="/"><b>Ayo Reis</b></a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="//instagram.com/ayo.reis">Instagram</a></li>
                 <li><a href="//github.com/ayoreis">GitHub</a></li>
