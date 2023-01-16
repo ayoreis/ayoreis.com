@@ -10,6 +10,17 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 <figure id="9">
     
+<img src="/pictures/10.1.webp" loading="lazy"/>
+<img src="/pictures/10.2.webp" loading="lazy"/>
+
+<figcaption>
+
+**Day 10** — Strawberries and blueberries and respberries.</figcaption>
+
+</figure>
+
+<figure id="9">
+    
 <img src="/pictures/9.1.webp" loading="lazy"/>
 <img src="/pictures/9.2.webp" loading="lazy"/>
 
@@ -79,7 +90,7 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 </figure>
 
-<figur id="2">
+<figure id="2">
     
 <img src="/pictures/2.webp" loading="lazy"/>
 
