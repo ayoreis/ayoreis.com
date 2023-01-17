@@ -31,7 +31,7 @@ export default async function () {
 		} catch {}
 	}
 
-	const source = `# Hello world! <br/> I am Ayo Reis, <br/> I make stuff.
+	const source = `# Hello world! <br/> I am Ayo, <br/> I make/do stuff/things.
 
 ## Projects
 

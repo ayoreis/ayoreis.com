@@ -8,6 +8,27 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 ---
 
+<figure id="12">
+    
+<img src="/pictures/12.1.webp" loading="lazy"/>
+<img src="/pictures/12.2.webp" loading="lazy"/>
+
+<figcaption>
+
+**Day 12** — Real map of an imaginary place.</figcaption>
+
+</figure>
+
+<figure id="11">
+
+<img src="/pictures/11.webp" loading="lazy"/>
+
+<figcaption>
+
+**Day 11** — My living room in the clouds.</figcaption>
+
+</figure>
+
 <figure id="10">
     
 <img src="/pictures/10.1.webp" loading="lazy"/>
