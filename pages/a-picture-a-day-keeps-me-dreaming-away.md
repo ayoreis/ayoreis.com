@@ -8,6 +8,16 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 ---
 
+<figure id="13">
+
+<video autoplay muted loop src="/pictures/13.webm"></video>
+
+<figcaption>
+
+**Day 13** — Blobs with holes and lines with movement.</figcaption>
+
+</figure>
+
 <figure id="12">
     
 <img src="/pictures/12.1.webp" loading="lazy"/>

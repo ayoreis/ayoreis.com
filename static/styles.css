@@ -33,6 +33,7 @@ h2 {
 	font-weight: bolder;
 }
 
+video,
 img {
 	max-height: 75vh;
 	max-width: 100%;
