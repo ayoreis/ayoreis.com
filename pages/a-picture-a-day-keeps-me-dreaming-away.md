@@ -8,6 +8,24 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 ---
 
+<figure id="14">
+    
+<video autoplay muted loop src="/pictures/14.1.webm">
+    Animation of good night tones waves.
+</video>
+
+<img alt="Good night tones wave #1." src="/pictures/14.2.webp" loading="lazy"/>
+<img alt="Good night tones wave #2." src="/pictures/14.3.webp" loading="lazy"/>
+<img alt="Good night tones wave #3." src="/pictures/14.4.webp" loading="lazy"/>
+<img alt="Good night tones wave #4." src="/pictures/14.5.webp" loading="lazy"/>
+<img alt="Good night tones wave #5." src="/pictures/14.6.webp" loading="lazy"/>
+
+<figcaption>
+
+**Day 14** — Good night tones.</figcaption>
+
+</figure>
+
 <figure id="13">
 
 <video autoplay muted loop src="/pictures/13.webm"></video>

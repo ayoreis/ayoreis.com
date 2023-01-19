@@ -31,13 +31,22 @@ export default async function () {
 		} catch {}
 	}
 
-	const source = `# Hello world! <br/> I am Ayo, <br/> I make/do stuff/things.
+	const source = `# Hello world! <br/> I'm Ayo, <br/> I make/do stuff/things.
+
+<section class="projects">
 
 ## Projects
 
 ${[...pages]
-	.map(([id, title]) => `- [${title}](/${id})`)
+	.map(([id, title]) => `- ### [${title}](/${id})`)
 	.join('\n')}
+- ### [Relax — For making websites](//github.com/ayoreis/relax)
+	
+</section>
+
+---
+
+[Back to top ^](#)
 `
 
 	const { markdown, properties } =

@@ -1,5 +1,8 @@
 :root {
+	--spacing: 2rem;
 	--hue: 0;
+
+	font-size: 18px;
 }
 
 * {
@@ -10,12 +13,11 @@
 
 body {
 	display: grid;
-	gap: 2rem;
+	gap: var(--spacing);
 
-	padding: 2rem;
+	padding: var(--spacing);
 
 	font-family: sans-serif;
-	font-size: 18px;
 
 	background-color: hsl(var(--hue) 100% 95%);
 
@@ -24,7 +26,8 @@ body {
 
 nav,
 main,
-article {
+article,
+section {
 	display: contents;
 }
 
@@ -63,7 +66,7 @@ nav > ul {
 	list-style: none;
 
 	grid-template-columns: 1fr repeat(3, auto);
-	gap: 1rem;
+	gap: calc(var(--spacing) / 2);
 	align-items: center;
 }
 
@@ -84,6 +87,35 @@ nav > ul > li {
 	justify-self: center;
 }
 
+nav > ul > li > a:hover {
+	text-decoration: underline dashed;
+}
+
 nav > ul > :last-child {
 	justify-self: end;
+}
+
+section.projects > ul {
+	display: grid;
+
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(300px, 1fr)
+	);
+
+	gap: calc(var(--spacing) / 2);
+
+	list-style: none;
+}
+
+section.projects > ul > li {
+	padding: var(--spacing);
+
+	background-color: hsl(0 0% 100% / 0.75);
+
+	border-radius: 0.1rem;
+}
+
+section.projects > ul > li > h3 {
+	font: unset;
 }
