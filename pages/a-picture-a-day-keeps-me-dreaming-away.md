@@ -10,7 +10,7 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 <figure id="14">
     
-<video autoplay muted loop src="/pictures/14.1.webm">
+<video autoplay muted loop src="/pictures/14.1.mp4">
     Animation of good night tones waves.
 </video>
 
@@ -28,7 +28,7 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 <figure id="13">
 
-<video autoplay muted loop src="/pictures/13.webm"></video>
+<video autoplay muted loop src="/pictures/13.mp4"></video>
 
 <figcaption>
 
