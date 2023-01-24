@@ -28,6 +28,8 @@ ${markdown}
 
 ---
 
+[Back to top ^](#)
+
 [< Home](/)`,
 			properties,
 		)

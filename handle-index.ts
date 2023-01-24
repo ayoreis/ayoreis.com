@@ -40,7 +40,7 @@ export default async function () {
 ${[...pages]
 	.map(([id, title]) => `- ### [${title}](/${id})`)
 	.join('\n')}
-- ### [Relax — For making websites](//github.com/ayoreis/relax)
+- ### [Relax — For making websites](https://github.com/ayoreis/relax)
 	
 </section>
 
