@@ -4,29 +4,50 @@ title = "A picture a day keeps me dreaming away"
 
 # {title}
 
-Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
+Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 
 ---
 
-<figure id="14">
+<figure id="16">
     
-<video autoplay muted loop playsinline>
-    <source src="/pictures/14.1.webm"/>
-    <source src="/pictures/14.1.mp4"/>
-
-    Animation of good night tones waves.
-
-</video>
-
-<img alt="Good night tones wave #1." src="/pictures/14.2.webp" loading="lazy"/>
-<img alt="Good night tones wave #2." src="/pictures/14.3.webp" loading="lazy"/>
-<img alt="Good night tones wave #3." src="/pictures/14.4.webp" loading="lazy"/>
-<img alt="Good night tones wave #4." src="/pictures/14.5.webp" loading="lazy"/>
-<img alt="Good night tones wave #5." src="/pictures/14.6.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/16.1.webp"/>
+<img loading="lazy" src="/pictures/16.2.webp" />
 
 <figcaption>
 
-**Day 14** — Good night tones.</figcaption>
+**Day 16** — Polaroid P</figcaption>
+
+</figure>
+
+<figure id="15">
+    
+<img loading="lazy" src="/pictures/15.webp"/>
+
+<figcaption>
+
+**Day 15** — Space waves</figcaption>
+
+</figure>
+
+<figure id="14">
+    
+<video autoplay loop muted playsinline>
+    <source src="/pictures/14.1.webm"/>
+    <source src="/pictures/14.1.mp4"/>
+
+    Animation of good night tones waves
+
+</video>
+
+<img alt="Good night tones wave #1." loading="lazy" src="/pictures/14.2.webp"/>
+<img alt="Good night tones wave #2." loading="lazy" src="/pictures/14.3.webp"/>
+<img alt="Good night tones wave #3." loading="lazy" src="/pictures/14.4.webp"/>
+<img alt="Good night tones wave #4." loading="lazy" src="/pictures/14.5.webp"/>
+<img alt="Good night tones wave #5." loading="lazy" src="/pictures/14.6.webp"/>
+
+<figcaption>
+
+**Day 14** — Good night shades</figcaption>
 
 </figure>
 
@@ -39,129 +60,129 @@ Follow me on [Instagram](//instagram.com/ayo.reis) for a picture a day!
 
 <figcaption>
 
-**Day 13** — Blobs with holes and lines with movement.</figcaption>
+**Day 13** — Blobs with holes and lines with movement</figcaption>
 
 </figure>
 
 <figure id="12">
     
-<img src="/pictures/12.1.webp" loading="lazy"/>
-<img src="/pictures/12.2.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/12.1.webp"/>
+<img loading="lazy" src="/pictures/12.2.webp"/>
 
 <figcaption>
 
-**Day 12** — Real map of an imaginary place.</figcaption>
+**Day 12** — Real map of an imaginary place</figcaption>
 
 </figure>
 
 <figure id="11">
 
-<img src="/pictures/11.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/11.webp"/>
 
 <figcaption>
 
-**Day 11** — My living room in the clouds.</figcaption>
+**Day 11** — My living room in the clouds</figcaption>
 
 </figure>
 
 <figure id="10">
     
-<img src="/pictures/10.1.webp" loading="lazy"/>
-<img src="/pictures/10.2.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/10.1.webp"/>
+<img loading="lazy" src="/pictures/10.2.webp"/>
 
 <figcaption>
 
-**Day 10** — Strawberries and blueberries and respberries.</figcaption>
+**Day 10** — Strawberries and blueberries and respberries</figcaption>
 
 </figure>
 
 <figure id="9">
     
-<img src="/pictures/9.1.webp" loading="lazy"/>
-<img src="/pictures/9.2.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/9.1.webp"/>
+<img loading="lazy" src="/pictures/9.2.webp"/>
 
 <figcaption>
 
-**Day 9** — There's happy people here. For this one I experimented drawing in a bigger scale (A3).</figcaption>
+**Day 9** — There's happy people here. For this one I experimented drawing in a bigger scale (A3)</figcaption>
 
 </figure>
 
 <figure id="8">
     
-<img src="/pictures/8.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/8.webp"/>
 
 <figcaption>
 
-**Day 8** — 5 pots, a lot of plants.</figcaption>
+**Day 8** — 5 pots, a lot of plants</figcaption>
 
 </figure>
 
 <figure id="7">
     
-<img src="/pictures/7.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/7.webp"/>
 
 <figcaption>
 
-**Day 7** — Roads, grass, butterflies. Xylophone, yellow, zebra.</figcaption>
+**Day 7** — Roads, grass, butterflies. Xylophone, yellow, zebra</figcaption>
 
 </figure>
 
 <figure id="6">
     
-<img src="/pictures/6.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/6.webp"/>
 
 <figcaption>
 
-**Day 6** — Things (flowers, tvs, plants, cupcakes, a carpet...) and stuff (more plants, a bike, tubes, smiley faces, oranges, books, a laptop, ideas, bricks, clouds, objects...) from around me when I was drawing (stuff/things from my head count as around too).</figcaption>
+**Day 6** — Things (flowers, tvs, plants, cupcakes, a carpet...) and stuff (more plants, a bike, tubes, smiley faces, oranges, books, a laptop, ideas, bricks, clouds, objects...) from around me when I was drawing (stuff/things from my head count as around too)</figcaption>
 
 </figure>
 
 <figure id="5">
     
-<img src="/pictures/5.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/5.webp"/>
 
 <figcaption>
 
-**Day 5** — Drawing/painting in a different/new style (in Blender/Procreate).</figcaption>
+**Day 5** — Drawing/painting in a different/new style (in Blender/Procreate)</figcaption>
 
 </figure>
 
 <figure id="4">
     
-<img src="/pictures/4.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/4.webp"/>
 
 <figcaption>
 
-**Day 4** — A colourful and dotful map.</figcaption>
+**Day 4** — A colourful and dotful map</figcaption>
 
 </figure>
 
 <figure id="3">
     
-<img src="/pictures/3.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/3.webp"/>
 
 <figcaption>
 
-**Day 3** — You know like when? You mix a lot of colours, detailed parts and big empty spaces and other random stuff.</figcaption>
+**Day 3** — You know like when? You mix a lot of colours, detailed parts and big empty spaces and other random stuff</figcaption>
 
 </figure>
 
 <figure id="2">
     
-<img src="/pictures/2.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/2.webp"/>
 
 <figcaption>
 
-**Day 2** — Costal place with overgrown dish antennas.</figcaption>
+**Day 2** — Costal place with overgrown dish antennas</figcaption>
 
 </figure>
 
 <figure id="1">
     
-<img src="/pictures/1.webp" loading="lazy"/>
+<img loading="lazy" src="/pictures/1.webp"/>
 
 <figcaption>
 
-**Day 1** — Inspired by the first drawing I ever made with alcohol markers, stairs, plants and corridors in a round little world.</figcaption>
+**Day 1** — Inspired by the first drawing I ever made with alcohol markers, stairs, plants and corridors in a round little world</figcaption>
 
 </figure>
