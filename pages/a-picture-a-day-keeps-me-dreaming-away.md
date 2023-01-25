@@ -1,5 +1,6 @@
 ---toml
 title = "A picture a day keeps me dreaming away"
+date = "January 1st, 2023 — WIP"
 ---
 
 # {title}

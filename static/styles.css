@@ -1,5 +1,6 @@
 :root {
 	--spacing: 2rem;
+	--border-radius: 0.1rem;
 	--hue: 0;
 
 	font-size: 18px;
@@ -26,7 +27,7 @@ body {
 
 nav,
 main,
-article,
+article:not(.project),
 section {
 	display: contents;
 }
@@ -59,6 +60,20 @@ a {
 
 a:hover {
 	text-decoration: underline dashed;
+}
+
+time {
+	justify-self: start;
+
+	padding: 0.1rem 0.2rem;
+
+	background-color: black;
+
+	font-size: 0.75rem;
+
+	color: white;
+
+	border-radius: var(--border-radius);
 }
 
 ul > li a {
@@ -109,13 +124,20 @@ section.projects > ul {
 }
 
 section.projects > ul > li {
+	display: contents;
+}
+
+article.project {
+	display: grid;
+	gap: calc(var(--spacing) / 4);
+
 	padding: var(--spacing);
 
 	background-color: hsl(0 0% 100% / 0.75);
 
-	border-radius: 0.1rem;
+	border-radius: var(--border-radius);
 }
 
-section.projects > ul > li > h3 {
+article.project > h3 {
 	font: unset;
 }

@@ -41,7 +41,9 @@ export function createResponse(
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>${title ? `${title} — ` : ''}Ayo Reis</title>
+        <title>${
+			title ? `${title} — ` : ''
+		}👋 Ayo 🌍 Reis</title>
         <link rel="stylesheet" href="/styles.css">
         <link href="https://unpkg.com/prism-themes@1.9.0/themes/prism-one-dark.min.css" rel="stylesheet" />
         ${styles

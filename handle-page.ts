@@ -28,9 +28,9 @@ ${markdown}
 
 ---
 
-[Back to top ^](#)
+[Back to top ⬆️](#)
 
-[< Home](/)`,
+[⬅️ Home](/)`,
 			properties,
 		)
 
