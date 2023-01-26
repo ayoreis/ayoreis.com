@@ -9,6 +9,17 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 
 ---
 
+<figure id="17">
+    
+<img loading="lazy" src="/pictures/17.1.webp"/>
+<img loading="lazy" src="/pictures/17.2.webp" />
+
+<figcaption>
+
+**Day 17** — B&G, blacks (always) and greens (sometimes)</figcaption>
+
+</figure>
+
 <figure id="16">
     
 <img loading="lazy" src="/pictures/16.1.webp"/>
