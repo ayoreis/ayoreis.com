@@ -14,8 +14,9 @@ export default async function (
 			`./pages/${id}.md`,
 		)
 
-		const { markdown, properties } =
-			separateFrontmatter(source)
+		const { markdown, properties } = separateFrontmatter(
+			source,
+		)
 
 		markdown
 
@@ -28,10 +29,10 @@ ${markdown}
 
 ---
 
-[Back to top ⬆️](#)
+[Back to top ⬆️](#top)
 
 [⬅️ Home](/)`,
-			properties,
+			properties ?? {},
 		)
 
 		return response

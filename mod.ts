@@ -9,7 +9,14 @@ import handleStaticFile from './handle-static-file.ts'
 const router = new Router()
 
 router.get('/', handleIndex)
-router.get('/*', handleStaticFile)
+
+router.get('*', (request) => {
+	if (!(request.url.endsWith('/'))) return
+
+	return Response.redirect(request.url.slice(0, -1), 308)
+})
+
+router.get('*', handleStaticFile)
 router.get('/:id', handlePage)
 router.get('*', handleNotFound)
 

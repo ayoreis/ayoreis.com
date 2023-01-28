@@ -13,11 +13,6 @@
 }
 
 body {
-	display: grid;
-	gap: var(--spacing);
-
-	padding: var(--spacing);
-
 	font-family: sans-serif;
 
 	background-color: hsl(var(--hue) 100% 95%);
@@ -27,9 +22,98 @@ body {
 
 nav,
 main,
-article:not(.project),
+footer {
+	padding: var(--spacing);
+}
+
+nav {
+	display: grid;
+
+	grid-template-columns: 1fr repeat(3, auto);
+	align-items: center;
+	gap: calc(var(--spacing) / 2);
+}
+
+nav > ul,
+nav > ul > li {
+	display: contents;
+}
+
+nav > ul > li:first-child > a {
+	width: min-content;
+
+	padding: 0.25rem 0.5rem;
+
+	display: inline-block;
+
+	justify-self: start;
+
+	color: black;
+
+	background-color: white;
+
+	mix-blend-mode: difference;
+}
+
+nav > ul > li > a {
+	justify-self: center;
+}
+
+nav > ul > li:last-child > a {
+	justify-self: end;
+}
+
+main {
+	display: grid;
+	gap: var(--spacing);
+}
+
 section {
 	display: contents;
+}
+
+section > ul {
+	display: grid;
+
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(300px, 1fr)
+	);
+
+	gap: calc(var(--spacing) / 2);
+
+	list-style: none;
+}
+
+section > ul > li {
+	display: contents;
+}
+
+section > ul > li > article {
+	display: grid;
+	place-content: start;
+	place-items: start;
+	gap: calc(var(--spacing) / 4);
+
+	padding: var(--spacing);
+
+	background-color: hsl(0 0% 100% / 0.75);
+
+	border-radius: var(--border-radius);
+}
+
+article {
+	display: contents;
+}
+
+footer {
+	padding: var(--spacing);
+
+	mix-blend-mode: difference;
+
+	background-color: white;
+
+	color: black;
 }
 
 h1,
@@ -52,6 +136,10 @@ ul {
 	list-style-position: inside;
 }
 
+ul > li a {
+	font-weight: revert;
+}
+
 a {
 	font-weight: bolder;
 	text-decoration: none;
@@ -63,8 +151,6 @@ a:hover {
 }
 
 time {
-	justify-self: start;
-
 	padding: 0.1rem 0.2rem;
 
 	background-color: black;
@@ -74,70 +160,4 @@ time {
 	color: white;
 
 	border-radius: var(--border-radius);
-}
-
-ul > li a {
-	font-weight: revert;
-}
-
-nav > ul {
-	display: grid;
-	list-style: none;
-
-	grid-template-columns: 1fr repeat(3, auto);
-	gap: calc(var(--spacing) / 2);
-	align-items: center;
-}
-
-nav > ul > :first-child {
-	justify-self: start;
-	width: min-content;
-}
-
-nav > ul > li:first-child > a {
-	mix-blend-mode: difference;
-	color: black;
-	background-color: white;
-	display: block;
-	padding: 0.25rem 0.5rem;
-}
-
-nav > ul > li {
-	justify-self: center;
-}
-
-nav > ul > :last-child {
-	justify-self: end;
-}
-
-section.projects > ul {
-	display: grid;
-
-	grid-template-columns: repeat(
-		auto-fill,
-		minmax(300px, 1fr)
-	);
-
-	gap: calc(var(--spacing) / 2);
-
-	list-style: none;
-}
-
-section.projects > ul > li {
-	display: contents;
-}
-
-article.project {
-	display: grid;
-	gap: calc(var(--spacing) / 4);
-
-	padding: var(--spacing);
-
-	background-color: hsl(0 0% 100% / 0.75);
-
-	border-radius: var(--border-radius);
-}
-
-article.project > h3 {
-	font: unset;
 }

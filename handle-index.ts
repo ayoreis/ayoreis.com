@@ -1,5 +1,3 @@
-import { extract } from 'std/encoding/front_matter/any.ts'
-
 import {
 	createResponse,
 	separateFrontmatter,
@@ -8,7 +6,7 @@ import {
 import { readTextFile } from './read-text-file.ts'
 
 export default async function () {
-	const pages = new Set<Record<string, string>>([
+	const pages = new Set<Record<string, unknown>>([
 		{
 			date: '2022 — WIP',
 			url: 'https://github.com/ayoreis/relax',
@@ -16,61 +14,67 @@ export default async function () {
 		},
 	])
 
-	for await (const { isFile, name } of Deno.readDir(
-		'pages',
-	)) {
+	for await (
+		const { isFile, name } of Deno.readDir(
+			'pages',
+		)
+	) {
 		if (!isFile) continue
 
-		try {
-			const { attrs: pageProperties } = extract<{
-				date: string
-				list: boolean
-				title: string
-			}>(await readTextFile(`pages/${name}`))
+		const source = await readTextFile(`pages/${name}`)
 
-			if (pageProperties.list === false) continue
+		const { properties } = separateFrontmatter(
+			source,
+		)
 
-			if (pageProperties.title)
-				pages.add({
-					date: pageProperties.date,
-					url: `/${name.slice(0, -3)}`,
-					title: pageProperties.title,
-				})
-			// deno-lint-ignore no-empty
-		} catch {}
+		if (!properties || (properties.list === false)) continue
+
+		pages.add({
+			date: properties.date,
+			url: `/${name.slice(0, -3)}`,
+			title: properties.title,
+		})
 	}
 
-	const source = `# 👋 Hello 🌍 world! <br/> I'm Ayo, <br/> I make/do stuff/things.
+	const source =
+		`# 👋 Hello 🌍 world! <br/> I'm Ayo, <br/> I make/do stuff/things.
 
 <section class="projects">
 
 ## Projects
 
 <ul>
-${[...pages]
-	.reverse()
-	.map(
-		({ date, title, url }) => `<li>
-<article  class="project">
-<time>${date}</time>
+${
+			[...pages]
+				.reverse()
+				.map(
+					({ date, title, url }) =>
+						`<li>
+<article>
+${date ? `<time>${date}</time>` : ''}
 
 ### [${title}](${url})
 </article>
 </li>`,
-	)
-	.join('\n')}
+				)
+				.join('\n')
+		}
 </ul>
 </section>
 
 ---
 
-[Back to top ⬆️](#)
+[Back to top ⬆️](#top)
 `
 
-	const { markdown, properties } =
-		separateFrontmatter(source)
+	const { markdown, properties } = separateFrontmatter(
+		source,
+	)
 
-	const response = createResponse(markdown, properties)
+	const response = createResponse(
+		markdown,
+		properties ?? {},
+	)
 
 	return response
 }

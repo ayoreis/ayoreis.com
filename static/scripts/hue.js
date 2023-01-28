@@ -1,6 +1,6 @@
 setInterval(() => {
-	const currentHue =
-		document.documentElement.style.getPropertyValue(
+	const currentHue = document.documentElement.style
+		.getPropertyValue(
 			'--hue',
 		)
 

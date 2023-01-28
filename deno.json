@@ -8,10 +8,18 @@
 		]
 	},
 
+	"fmt": {
+		"options": {
+			"lineWidth": 60,
+			"semiColons": false,
+			"singleQuote": true,
+			"useTabs": true
+		}
+	},
+
 	"importMap": "./import-map.json",
 
 	"tasks": {
-		"dev": "deno run --watch --allow-net=0.0.0.0:8000 --allow-read=pages,static mod.ts",
-		"serve": "deno run --allow-net=0.0.0.0:8000 --allow-read=pages,static mod.ts"
+		"dev": "deno run --watch --allow-net=0.0.0.0:8000 --allow-read=pages,static mod.ts"
 	}
 }

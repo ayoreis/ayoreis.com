@@ -454,6 +454,7 @@
     "https://deno.land/std@0.171.0/encoding/base64url.ts": "3f1178f6446834457b16bfde8b559c1cd3481727fe384d3385e4a9995dc2d851",
     "https://deno.land/std@0.171.0/encoding/front_matter/any.ts": "8debc7942e5f8d9a119049a38684e4a3b80badea898aa2be341bc76d000790a1",
     "https://deno.land/std@0.171.0/encoding/front_matter/mod.ts": "e9cd15d063986f05c34483cb7ecb0465ae10e6ba5ec9c6b4db6b4b0e20946dd4",
+    "https://deno.land/std@0.171.0/encoding/front_matter/yaml.ts": "c0293a9599dd5a8af53a1567c829eb23c35f364744ae7b19a3cd28c6e6b3c68d",
     "https://deno.land/std@0.171.0/encoding/hex.ts": "50f8c95b52eae24395d3dfcb5ec1ced37c5fe7610ef6fffdcc8b0fdc38e3b32f",
     "https://deno.land/std@0.171.0/encoding/toml.ts": "d11fc659365218035ec1d92c1dfa206718838954a6de7cfc62d0a07ffb19f582",
     "https://deno.land/std@0.171.0/encoding/yaml.ts": "02571d1bbbcfd7c5647789cee872ecf9c1c470e1b1a40948ed219fb661e19d87",

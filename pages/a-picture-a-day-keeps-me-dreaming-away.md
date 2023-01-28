@@ -1,27 +1,41 @@
----toml
-title = "A picture a day keeps me dreaming away"
-date = "January 1st, 2023 — WIP"
+---
+title: "A picture a day keeps me dreaming away"
+date: "January 1st, 2023 — WIP"
 ---
 
 # {title}
 
-Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
+Follow me on [Instagram](https://instagram.com/ayo.reis) for
+a picture a day!
 
 ---
 
+<figure id="18">
+
+<img loading="lazy" src="/pictures/18.1.webp"/>
+<img loading="lazy" src="/pictures/18.2.webp" />
+<img loading="lazy" src="/pictures/18.3.webp" />
+
+<figcaption>
+
+**Day 18** // Paternful intersections</figcaption>
+
+</figure>
+
 <figure id="17">
-    
+
 <img loading="lazy" src="/pictures/17.1.webp"/>
 <img loading="lazy" src="/pictures/17.2.webp" />
 
 <figcaption>
 
-**Day 17** — B&G, blacks (always) and greens (sometimes)</figcaption>
+**Day 17** — B&G, blacks (always) and greens
+(sometimes)</figcaption>
 
 </figure>
 
 <figure id="16">
-    
+
 <img loading="lazy" src="/pictures/16.1.webp"/>
 <img loading="lazy" src="/pictures/16.2.webp" />
 
@@ -32,7 +46,7 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 </figure>
 
 <figure id="15">
-    
+
 <img loading="lazy" src="/pictures/15.webp"/>
 
 <figcaption>
@@ -42,7 +56,7 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 </figure>
 
 <figure id="14">
-    
+
 <video autoplay loop muted playsinline>
     <source src="/pictures/14.1.webm"/>
     <source src="/pictures/14.1.mp4"/>
@@ -72,12 +86,13 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 
 <figcaption>
 
-**Day 13** — Blobs with holes and lines with movement</figcaption>
+**Day 13** — Blobs with holes and lines with
+movement</figcaption>
 
 </figure>
 
 <figure id="12">
-    
+
 <img loading="lazy" src="/pictures/12.1.webp"/>
 <img loading="lazy" src="/pictures/12.2.webp"/>
 
@@ -98,29 +113,31 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 </figure>
 
 <figure id="10">
-    
+
 <img loading="lazy" src="/pictures/10.1.webp"/>
 <img loading="lazy" src="/pictures/10.2.webp"/>
 
 <figcaption>
 
-**Day 10** — Strawberries and blueberries and respberries</figcaption>
+**Day 10** — Strawberries and blueberries and
+respberries</figcaption>
 
 </figure>
 
 <figure id="9">
-    
+
 <img loading="lazy" src="/pictures/9.1.webp"/>
 <img loading="lazy" src="/pictures/9.2.webp"/>
 
 <figcaption>
 
-**Day 9** — There's happy people here. For this one I experimented drawing in a bigger scale (A3)</figcaption>
+**Day 9** — There's happy people here. For this one I
+experimented drawing in a bigger scale (A3)</figcaption>
 
 </figure>
 
 <figure id="8">
-    
+
 <img loading="lazy" src="/pictures/8.webp"/>
 
 <figcaption>
@@ -130,37 +147,43 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 </figure>
 
 <figure id="7">
-    
+
 <img loading="lazy" src="/pictures/7.webp"/>
 
 <figcaption>
 
-**Day 7** — Roads, grass, butterflies. Xylophone, yellow, zebra</figcaption>
+**Day 7** — Roads, grass, butterflies. Xylophone, yellow,
+zebra</figcaption>
 
 </figure>
 
 <figure id="6">
-    
+
 <img loading="lazy" src="/pictures/6.webp"/>
 
 <figcaption>
 
-**Day 6** — Things (flowers, tvs, plants, cupcakes, a carpet...) and stuff (more plants, a bike, tubes, smiley faces, oranges, books, a laptop, ideas, bricks, clouds, objects...) from around me when I was drawing (stuff/things from my head count as around too)</figcaption>
+**Day 6** — Things (flowers, tvs, plants, cupcakes, a
+carpet...) and stuff (more plants, a bike, tubes, smiley
+faces, oranges, books, a laptop, ideas, bricks, clouds,
+objects...) from around me when I was drawing (stuff/things
+from my head count as around too)</figcaption>
 
 </figure>
 
 <figure id="5">
-    
+
 <img loading="lazy" src="/pictures/5.webp"/>
 
 <figcaption>
 
-**Day 5** — Drawing/painting in a different/new style (in Blender/Procreate)</figcaption>
+**Day 5** — Drawing/painting in a different/new style (in
+Blender/Procreate)</figcaption>
 
 </figure>
 
 <figure id="4">
-    
+
 <img loading="lazy" src="/pictures/4.webp"/>
 
 <figcaption>
@@ -170,31 +193,36 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for a picture a day!
 </figure>
 
 <figure id="3">
-    
+
 <img loading="lazy" src="/pictures/3.webp"/>
 
 <figcaption>
 
-**Day 3** — You know like when? You mix a lot of colours, detailed parts and big empty spaces and other random stuff</figcaption>
+**Day 3** — You know like when? You mix a lot of colours,
+detailed parts and big empty spaces and other random
+stuff</figcaption>
 
 </figure>
 
 <figure id="2">
-    
+
 <img loading="lazy" src="/pictures/2.webp"/>
 
 <figcaption>
 
-**Day 2** — Costal place with overgrown dish antennas</figcaption>
+**Day 2** — Costal place with overgrown dish
+antennas</figcaption>
 
 </figure>
 
 <figure id="1">
-    
+
 <img loading="lazy" src="/pictures/1.webp"/>
 
 <figcaption>
 
-**Day 1** — Inspired by the first drawing I ever made with alcohol markers, stairs, plants and corridors in a round little world</figcaption>
+**Day 1** — Inspired by the first drawing I ever made with
+alcohol markers, stairs, plants and corridors in a round
+little world</figcaption>
 
 </figure>
