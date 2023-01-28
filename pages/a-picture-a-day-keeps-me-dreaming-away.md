@@ -18,7 +18,7 @@ a picture a day!
 
 <figcaption>
 
-**Day 18** // Paternful intersections</figcaption>
+**Day 18** // Patternful intersections</figcaption>
 
 </figure>
 
