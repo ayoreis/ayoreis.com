@@ -10,6 +10,35 @@ a picture a day!
 
 ---
 
+<figure id="20">
+
+<img loading="lazy" src="/pictures/20.1.webp"/>
+<img loading="lazy" src="/pictures/20.2.webp" />
+
+<figcaption>
+
+**Day 10** // **20012023** // Modified ISV_69 container ship
+— "Entangled"</figcaption>
+
+</figure>
+
+<figure id="19">
+
+<video autoplay loop muted playsinline>
+<source src="/pictures/19.mp4"/>
+
+Looping loops
+
+</video>
+<figcaption>
+
+**Day 19** // **19012023** // Looping loops
+
+Inspired by [Ducky 3D](https://www.ducky3d.com)'s
+tutorial.</figcaption>
+
+</figure>
+
 <figure id="18">
 
 <img loading="lazy" src="/pictures/18.1.webp"/>
@@ -58,10 +87,10 @@ a picture a day!
 <figure id="14">
 
 <video autoplay loop muted playsinline>
-    <source src="/pictures/14.1.webm"/>
-    <source src="/pictures/14.1.mp4"/>
+<source src="/pictures/14.1.webm"/>
+<source src="/pictures/14.1.mp4"/>
 
-    Animation of good night tones waves
+Animation of good night tones waves
 
 </video>
 
@@ -80,8 +109,8 @@ a picture a day!
 <figure id="13">
 
 <video autoplay loop muted playsinline>
-    <source src="/pictures/13.webm"/>
-    <source src="/pictures/13.mp4"/>
+<source src="/pictures/13.webm"/>
+<source src="/pictures/13.mp4"/>
 </video>
 
 <figcaption>
