@@ -6,18 +6,28 @@ date: "January 1st, 2023 — WIP"
 # {title}
 
 Follow me on [Instagram](https://instagram.com/ayo.reis) for
-a picture a day!
+(almost) a picture a day!
 
 ---
 
-<figure id="20">
+<figure id="24">
 
+<img loading="lazy" src="/pictures/24.1.webp"/>
+<img loading="lazy" src="/pictures/24.2.webp" />
+
+<figcaption>
+
+**Day 24** // **24012023** // Pretty mess</figcaption>
+
+</figure>
+
+<figure id="20">
 <img loading="lazy" src="/pictures/20.1.webp"/>
 <img loading="lazy" src="/pictures/20.2.webp" />
 
 <figcaption>
 
-**Day 10** // **20012023** // Modified ISV_69 container ship
+**Day 20** // **20012023** // Modified ISV_69 container ship
 — "Entangled"</figcaption>
 
 </figure>
