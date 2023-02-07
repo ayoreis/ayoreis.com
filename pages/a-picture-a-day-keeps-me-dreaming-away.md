@@ -10,6 +10,16 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 
 ---
 
+<figure id="26">
+<img loading="lazy" src="/pictures/26.1.webp"/>
+<img loading="lazy" src="/pictures/26.2.webp" />
+
+<figcaption>
+
+**Day 26** // **26012023** // 3–2D distortion</figcaption>
+
+</figure>
+
 <figure id="24">
 
 <img loading="lazy" src="/pictures/24.1.webp"/>
