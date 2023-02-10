@@ -10,8 +10,20 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 
 ---
 
+<figure id="28">
+<img loading="lazy" src="/pictures/28.1.webp" />
+<img loading="lazy" src="/pictures/28.2.webp" />
+<img loading="lazy" src="/pictures/28.3.webp" />
+
+<figcaption>
+
+**Day 28** // **28012023** // Resolution (in many
+ways)</figcaption>
+
+</figure>
+
 <figure id="26">
-<img loading="lazy" src="/pictures/26.1.webp"/>
+<img loading="lazy" src="/pictures/26.1.webp" />
 <img loading="lazy" src="/pictures/26.2.webp" />
 
 <figcaption>

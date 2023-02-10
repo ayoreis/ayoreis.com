@@ -2,8 +2,6 @@
 	--spacing: 2rem;
 	--border-radius: 0.1rem;
 	--hue: 0;
-
-	font-size: 18px;
 }
 
 * {
@@ -13,6 +11,12 @@
 }
 
 body {
+	min-height: 100vh;
+
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+	align-items: end;
+
 	font-family: sans-serif;
 
 	background-color: hsl(var(--hue) 100% 95%);

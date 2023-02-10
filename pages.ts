@@ -103,7 +103,7 @@ export function createResponse(
 
 		<footer>
 			<p>
-				Made by <a href="/" rel="author">Ayo</a> with <a href="https://deno.land">Deno</a>, <a href="https://deno.com/deploy">Deno Deploy</a>, <a href="https://www.typescriptlang.org">TypeScript</a>, <a href="https://github.com/ayoreis/relax">Relax</a>, HTML, CSS and JavaScript.
+				Made by <a href="/" rel="author">Me</a> with <a href="https://deno.land">Deno</a>, <a href="https://deno.com/deploy">Deno Deploy</a>, <a href="https://www.typescriptlang.org">TypeScript</a>, <a href="https://github.com/ayoreis/relax">Relax</a>, HTML, CSS and JavaScript.
 			</p>
 		</footer>
     </body>
