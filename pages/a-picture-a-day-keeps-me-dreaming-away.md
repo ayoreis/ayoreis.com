@@ -10,6 +10,16 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 
 ---
 
+<figure id="29">
+<img loading="lazy" src="/pictures/29.1.webp" />
+<img loading="lazy" src="/pictures/29.2.webp" />
+<figcaption>
+
+**Day 29!** YAS-S
+
+</figcaption>
+</figure>
+
 <figure id="28">
 <img loading="lazy" src="/pictures/28.1.webp" />
 <img loading="lazy" src="/pictures/28.2.webp" />
