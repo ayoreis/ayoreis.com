@@ -15,8 +15,7 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 <img loading="lazy" src="/pictures/30.2.webp" />
 <figcaption>
 
-**Day 30!** Square veggies\
-Chess?
+**Day 30!** Square veggies. Chess?
 
 </figcaption>
 </figure>
