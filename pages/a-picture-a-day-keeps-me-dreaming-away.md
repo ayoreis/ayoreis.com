@@ -10,6 +10,17 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 
 ---
 
+<figure id="30">
+<img loading="lazy" src="/pictures/30.1.webp" />
+<img loading="lazy" src="/pictures/30.2.webp" />
+<figcaption>
+
+**Day 30!** Square veggies\
+Chess?
+
+</figcaption>
+</figure>
+
 <figure id="29">
 <img loading="lazy" src="/pictures/29.1.webp" />
 <img loading="lazy" src="/pictures/29.2.webp" />
