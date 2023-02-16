@@ -10,6 +10,16 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 
 ---
 
+<figure id="31">
+<img loading="lazy" src="/pictures/31.1.webp" />
+<img loading="lazy" src="/pictures/31.2.webp" />
+<figcaption>
+
+**Day 31!** Idea lab(yrinth?)
+
+</figcaption>
+</figure>
+
 <figure id="30">
 <img loading="lazy" src="/pictures/30.1.webp" />
 <img loading="lazy" src="/pictures/30.2.webp" />
