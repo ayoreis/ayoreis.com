@@ -48,7 +48,7 @@ export function markdown(
 		<meta name="author" content="Ayo Reis" />
 		<meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>C:/AyoReis/${title ?? ""}</title>
+        <title>C:/AyoReis${title ? `/${title}` : ""}</title>
 
         <link rel="stylesheet" href="/styles.css">
         ${
