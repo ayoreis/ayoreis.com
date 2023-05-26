@@ -1,7 +1,15 @@
 :root {
-	--spacing: 2rem;
-	--border-radius: 0.1rem;
-	--hue: 0;
+	--light-grey: #eee;
+	--grey: #888;
+
+	--font-family-sans: ui-sans-serif, system-ui, sans-serif;
+
+	--spacing-x: 1rem;
+	--spacing-y: 2rem;
+	--spacing-small: 0.5rem;
+
+	--border: 1px solid var(--grey);
+	--border-radius: 0.25rem;
 }
 
 * {
@@ -11,157 +19,146 @@
 }
 
 body {
-	min-height: 100vh;
+	background-color: var(--light-grey);
 
-	display: grid;
-	grid-template-rows: auto auto 1fr;
-	align-items: end;
+	font-family: var(--font-family-sans);
 
-	font-family: sans-serif;
-
-	background-color: hsl(var(--hue) 100% 95%);
-
-	scroll-behavior: smooth;
+	padding-inline: var(--spacing-x);
 }
 
-nav,
-main,
-footer {
-	padding: var(--spacing);
+main:not(:has(> article)) {
+	display: flex;
+	gap: var(--spacing-x);
+	flex-wrap: wrap;
+	align-content: stretch;
 }
 
-nav {
-	display: grid;
-
-	grid-template-columns: 1fr repeat(3, auto);
-	align-items: center;
-	gap: calc(var(--spacing) / 2);
+main > h1,
+#projects > ul > li {
+	flex: max-content;
 }
 
-nav > ul,
-nav > ul > li {
-	display: contents;
+#projects > ul > li > article > h2 {
+	max-width: 300px;
 }
 
-nav > ul > li:first-child > a {
-	width: min-content;
-
-	padding: 0.25rem 0.5rem;
-
-	display: inline-block;
-
-	justify-self: start;
-
-	color: black;
-
-	background-color: white;
-
-	mix-blend-mode: difference;
+blockquote {
+	border-left: var(--border);
+	border-width: 5px;
+	padding-left: var(--spacing-small);
 }
 
-nav > ul > li > a {
-	justify-self: center;
-}
-
-nav > ul > li:last-child > a {
-	justify-self: end;
-}
-
-main {
-	display: grid;
-	gap: var(--spacing);
-}
-
-section {
-	display: contents;
-}
-
-section > ul {
-	display: grid;
-
-	grid-template-columns: repeat(
-		auto-fill,
-		minmax(300px, 1fr)
-	);
-
-	gap: calc(var(--spacing) / 2);
-
-	list-style: none;
-}
-
-section > ul > li {
-	display: contents;
-}
-
-section > ul > li > article {
-	display: grid;
-	place-content: start;
-	place-items: start;
-	gap: calc(var(--spacing) / 4);
-
-	padding: var(--spacing);
-
-	background-color: hsl(0 0% 100% / 0.75);
-
-	border-radius: var(--border-radius);
-}
-
-article {
-	display: contents;
-}
-
-footer {
-	padding: var(--spacing);
-
-	mix-blend-mode: difference;
-
-	background-color: white;
-
-	color: black;
-}
-
-h1,
-h2 {
-	font-weight: bolder;
-}
-
-video,
-img {
-	max-height: 75vh;
+img, video {
+	height: 75vh;
+	height: 75svh;
 	max-width: 100%;
+	height: auto;
 }
 
-hr {
-	border: none;
-	border-top: 2px solid currentColor;
+#projects > ul > li > article > .info,
+main > h1::before {
+	content: 'README.md';
+
+	display: flex;
+	gap: var(--spacing-small);
+
+	font-weight: normal;
+
+	font-size: 1rem;
+	color: var(--grey);
+	word-spacing: -0.5ch;
+
+	background-color: var(--light-grey);
+	padding: var(--spacing-x);
+
+	margin-top: calc(var(--spacing-y) * -1);
+	margin-inline: calc(var(--spacing-x) * -1);
+	border-bottom: var(--border);
+	margin-bottom: var(--spacing-x);
 }
 
-ul {
-	list-style-position: inside;
-}
-
-ul > li a {
-	font-weight: revert;
+main > h1 {
+	overflow: hidden;
+	background-color: white;
+	border: var(--border);
+	/* width: max-content; */
+	padding-inline: var(--spacing-x);
+	padding-block: var(--spacing-y);
+	border-radius: var(--border-radius);
 }
 
 a {
-	font-weight: bolder;
-	text-decoration: none;
-	color: currentColor;
+	color: inherit;
 }
 
-a:hover {
-	text-decoration: underline dashed;
-}
-
-time {
-	padding: 0.1rem 0.2rem;
-
-	background-color: black;
-
-	font-size: 0.75rem;
-
-	color: white;
-
+a[aria-current='page'] {
+	background-color: white;
 	border-radius: var(--border-radius);
+	padding-inline: 0.25rem;
+}
+
+nav > ul {
+	padding-block: var(--spacing-x);
+
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: var(--spacing-x);
+
+	list-style-type: none;
+}
+
+nav > ul > li {
+	color: black;
+	text-transform: capitalize;
+	word-spacing: -0.5ch;
+}
+
+nav > ul > li:first-child {
+	margin-right: auto;
+}
+
+nav > ul > li > a {
+	display: block;
+	width: fit-content;
+}
+
+nav > ul > li > a:not(:hover) {
+	text-decoration: none;
+}
+
+nav > ul > li > a::before {
+	content: 'C:/';
+
+	text-decoration: inherit;
+}
+
+#projects,
+#projects > ul {
+	display: contents;
+}
+
+#projects > ul {
+	list-style-type: none;
+}
+
+#projects > ul > li {
+	padding-inline: var(--spacing-x);
+	padding-block: var(--spacing-y);
+
+	background-color: white;
+
+	transition: all 0.1s;
+	border-radius: var(--border-radius);
+	border: var(--border);
+	overflow: hidden;
+}
+
+footer {
+	color: var(--grey);
+	padding-block: var(--spacing-x);
+}
+
+main > article > :not(:first-child) {
+	margin-top: 0.5lh;
 }

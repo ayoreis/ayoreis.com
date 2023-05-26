@@ -1,25 +1,17 @@
 {
-	"compilerOptions": {
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"dom.asynciterable",
-			"deno.ns"
-		]
-	},
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]
+  },
 
-	"fmt": {
-		"options": {
-			"lineWidth": 60,
-			"semiColons": false,
-			"singleQuote": true,
-			"useTabs": true
-		}
-	},
+  "fmt": {
+    "lineWidth": 60,
+    "singleQuote": false,
+    "useTabs": true
+  },
 
-	"importMap": "./import-map.json",
+  "importMap": "import-map.json",
 
-	"tasks": {
-		"dev": "deno run --watch --allow-net=0.0.0.0:8000 --allow-read=pages,static mod.ts"
-	}
+  "tasks": {
+    "dev": "deno run --watch --allow-net=0.0.0.0:8000 --allow-read=pages,static mod.ts"
+  }
 }

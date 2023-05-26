@@ -1,41 +1,26 @@
-import {
-	createResponse,
-	separateFrontmatter,
-} from './pages.ts'
-
-import { readTextFile } from './read-text-file.ts'
+import { frontmatter, markdown } from "./syntax.ts";
 
 export default async function (
-	_request: Request,
-	{ id }: URLPatternComponentResult['groups'],
+  { url }: Request,
+  { id }: URLPatternComponentResult["groups"],
 ) {
-	try {
-		const source = await readTextFile(
-			`./pages/${id}.md`,
-		)
+  try {
+    const source = await Deno.readTextFile(`./pages/${id}.md`);
 
-		const { markdown, properties } = separateFrontmatter(
-			source,
-		)
+    const { properties, content } = frontmatter(source);
 
-		markdown
+    const HTML = markdown(
+      new URL(url),
+      properties,
+      `<article>
 
-		const response = createResponse(
-			`<article>
+${content}
+</article>`,
+    );
 
-${markdown}
-
-</article>
-
----
-
-[Back to top ⬆️](#top)
-
-[⬅️ Home](/)`,
-			properties ?? {},
-		)
-
-		return response
-		// deno-lint-ignore no-empty
-	} catch {}
+    return new Response(HTML, {
+      headers: { "content-type": "text/html; charset=UTF-8" },
+    });
+    // deno-lint-ignore no-empty
+  } catch {}
 }

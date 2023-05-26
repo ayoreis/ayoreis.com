@@ -1,80 +1,67 @@
-import {
-	createResponse,
-	separateFrontmatter,
-} from './pages.ts'
+import { frontmatter, markdown, type Properties } from "./syntax.ts";
 
-import { readTextFile } from './read-text-file.ts'
+export default async function ({ url }: Request) {
+  const pages: Properties[] = [
+    {
+      date: "2022 .WIP",
+      url: "https://github.com/ayoreis/relax",
+      title: "Relax — For making websites",
+    },
 
-export default async function () {
-	const pages = new Set<Record<string, unknown>>([
-		{
-			date: '2022 — WIP',
-			url: 'https://github.com/ayoreis/relax',
-			title: 'Relax — For making websites',
-		},
-	])
+    {
+      date: "May 2023 .WIP",
+      url: "https://github.com/ayoreis/generative-agents",
+      title: "Generative Agents: Interactive Simulacra of Human Behavior",
+    },
+  ];
 
-	for await (
-		const { isFile, name } of Deno.readDir(
-			'pages',
-		)
-	) {
-		if (!isFile) continue
+  for await (const { isFile, name } of Deno.readDir("pages")) {
+    if (!isFile) continue;
 
-		const source = await readTextFile(`pages/${name}`)
+    const source = await Deno.readTextFile(`pages/${name}`);
 
-		const { properties } = separateFrontmatter(
-			source,
-		)
+    const { properties } = frontmatter(source);
 
-		if (!properties || (properties.list === false)) continue
+    if (!properties || properties.list === false) continue;
 
-		pages.add({
-			date: properties.date,
-			url: `/${name.slice(0, -3)}`,
-			title: properties.title,
-		})
-	}
+    pages.unshift({
+      date: properties.date,
+      url: `/${name.slice(0, -3)}`,
+      title: properties.title,
+    });
+  }
 
-	const source =
-		`# 👋 Hello 🌍 world! <br/> I'm Ayo, <br/> I make/do stuff/things.
+  const source = `# Hello world!<br/>I'm Ayo,<br/>I make stuff.
 
-<section class="projects">
-
-## Projects
-
+<section id="projects">
 <ul>
 ${
-			[...pages]
-				.reverse()
-				.map(
-					({ date, title, url }) =>
-						`<li>
+    [...pages]
+      .reverse()
+      .map(
+        ({ date, title, url }) =>
+          `<li>
 <article>
-${date ? `<time>${date}</time>` : ''}
+${`<div aria-hidden="true" class="info">
+${date ? `<time>${date}</time>` : ""}
+${Math.round(Math.random() * 5 * 10) / 10}kb
+</div>`}
 
-### [${title}](${url})
+## [${title}](${url})
 </article>
 </li>`,
-				)
-				.join('\n')
-		}
+      )
+      .join("\n")
+  }
 </ul>
 </section>
+`;
 
----
+  const { properties, content } = frontmatter(source);
 
-[Back to top ⬆️](#top)
-`
+  const HTML = markdown(new URL(url), properties, content);
 
-	const { markdown, properties } = separateFrontmatter(
-		source,
-	)
-
-	const response = createResponse(
-		markdown,
-		properties ?? {},
-	)
-
-	return response
+  return new Response(HTML, {
+    headers: { "content-type": "text/html; charset=UTF-8" },
+  });
 }

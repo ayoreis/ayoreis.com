@@ -1,14 +1,15 @@
 ---
-title: "A picture a day keeps me dreaming away"
-date: "January 1st, 2023 — WIP"
+title: 'A picture a day keeps me dreaming away'
+date: '1 January 2023 . WIP'
+# list: false
 ---
 
 # {title}
 
-Follow me on [Instagram](https://instagram.com/ayo.reis) for
-(almost) a picture a day!
+> Archived, follow me on [Instagram](https://instagram.com/ayo.reis) for newer
+> pictures a day!
 
----
+## Old pictures:
 
 <figure id="31">
 <img loading="lazy" src="/pictures/31.1.webp" />
@@ -47,8 +48,7 @@ Follow me on [Instagram](https://instagram.com/ayo.reis) for
 
 <figcaption>
 
-**Day 28** // **28012023** // Resolution (in many
-ways)</figcaption>
+**Day 28** // **28012023** // Resolution (in many ways)</figcaption>
 
 </figure>
 
@@ -79,8 +79,8 @@ ways)</figcaption>
 
 <figcaption>
 
-**Day 20** // **20012023** // Modified ISV_69 container ship
-— "Entangled"</figcaption>
+**Day 20** // **20012023** // Modified ISV_69 container ship —
+"Entangled"</figcaption>
 
 </figure>
 
@@ -96,8 +96,7 @@ Looping loops
 
 **Day 19** // **19012023** // Looping loops
 
-Inspired by [Ducky 3D](https://www.ducky3d.com)'s
-tutorial.</figcaption>
+Inspired by [Ducky 3D](https://www.ducky3d.com)'s tutorial.</figcaption>
 
 </figure>
 
@@ -120,8 +119,7 @@ tutorial.</figcaption>
 
 <figcaption>
 
-**Day 17** — B&G, blacks (always) and greens
-(sometimes)</figcaption>
+**Day 17** — B&G, blacks (always) and greens (sometimes)</figcaption>
 
 </figure>
 
@@ -177,8 +175,7 @@ Animation of good night tones waves
 
 <figcaption>
 
-**Day 13** — Blobs with holes and lines with
-movement</figcaption>
+**Day 13** — Blobs with holes and lines with movement</figcaption>
 
 </figure>
 
@@ -210,8 +207,7 @@ movement</figcaption>
 
 <figcaption>
 
-**Day 10** — Strawberries and blueberries and
-respberries</figcaption>
+**Day 10** — Strawberries and blueberries and respberries</figcaption>
 
 </figure>
 
@@ -222,8 +218,8 @@ respberries</figcaption>
 
 <figcaption>
 
-**Day 9** — There's happy people here. For this one I
-experimented drawing in a bigger scale (A3)</figcaption>
+**Day 9** — There's happy people here. For this one I experimented drawing in a
+bigger scale (A3)</figcaption>
 
 </figure>
 
@@ -243,8 +239,7 @@ experimented drawing in a bigger scale (A3)</figcaption>
 
 <figcaption>
 
-**Day 7** — Roads, grass, butterflies. Xylophone, yellow,
-zebra</figcaption>
+**Day 7** — Roads, grass, butterflies. Xylophone, yellow, zebra</figcaption>
 
 </figure>
 
@@ -254,11 +249,10 @@ zebra</figcaption>
 
 <figcaption>
 
-**Day 6** — Things (flowers, tvs, plants, cupcakes, a
-carpet...) and stuff (more plants, a bike, tubes, smiley
-faces, oranges, books, a laptop, ideas, bricks, clouds,
-objects...) from around me when I was drawing (stuff/things
-from my head count as around too)</figcaption>
+**Day 6** — Things (flowers, tvs, plants, cupcakes, a carpet...) and stuff (more
+plants, a bike, tubes, smiley faces, oranges, books, a laptop, ideas, bricks,
+clouds, objects...) from around me when I was drawing (stuff/things from my head
+count as around too)</figcaption>
 
 </figure>
 
@@ -289,9 +283,8 @@ Blender/Procreate)</figcaption>
 
 <figcaption>
 
-**Day 3** — You know like when? You mix a lot of colours,
-detailed parts and big empty spaces and other random
-stuff</figcaption>
+**Day 3** — You know like when? You mix a lot of colours, detailed parts and big
+empty spaces and other random stuff</figcaption>
 
 </figure>
 
@@ -301,8 +294,7 @@ stuff</figcaption>
 
 <figcaption>
 
-**Day 2** — Costal place with overgrown dish
-antennas</figcaption>
+**Day 2** — Costal place with overgrown dish antennas</figcaption>
 
 </figure>
 
@@ -312,8 +304,7 @@ antennas</figcaption>
 
 <figcaption>
 
-**Day 1** — Inspired by the first drawing I ever made with
-alcohol markers, stairs, plants and corridors in a round
-little world</figcaption>
+**Day 1** — Inspired by the first drawing I ever made with alcohol markers,
+stairs, plants and corridors in a round little world</figcaption>
 
 </figure>

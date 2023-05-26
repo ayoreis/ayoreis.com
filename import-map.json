@@ -1,8 +1,7 @@
 {
 	"imports": {
 		"relax/": "https://deno.land/x/relax@0.1.0/",
-		"std/": "https://deno.land/std@0.171.0/",
-		"marked": "https://esm.sh/marked@4.2.5?bundle&dev&pin=v102",
-		"error-stack-parser": "https://esm.sh/error-stack-parser@3.0.0?exports=default&bundle&dev&pin=v102&no-dts"
+		"std/": "https://deno.land/std@0.177.1/",
+		"marked": "https://esm.sh/marked@5.0.2?exports=marked&bundle&dev&pin=v124"
 	}
 }
