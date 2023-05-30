@@ -44,7 +44,7 @@ ${
 <article>
 ${`<div aria-hidden="true" class="info">
 ${date ? `<time>${date}</time>` : ""}
-${Math.round(Math.random() * 5 * 10) / 10}kb
+${(Math.random() * 5).toFixed(1)}kb
 </div>`}
 
 ## [${title}](${url})
