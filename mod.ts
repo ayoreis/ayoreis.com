@@ -12,9 +12,20 @@ const router = new Router();
 router.get('/', handleIndex);
 
 router.get('*', (request) => {
-	if (!request.url.endsWith('/')) return;
+	const url = new URL(request.url)
+	const splitURL = url.hostname.split('.', 1)
 
-	return Response.redirect(request.url.slice(0, -1), Status.PermanentRedirect);
+	if (splitURL[0] === 'www') {
+		url.hostname = splitURL[1]
+	}
+
+	if (url.pathname.endsWith('/')) {
+		url.pathname = url.pathname.slice(0, -1)
+	}
+	
+	if (url.toString() !== request.url) {
+		return Response.redirect(url, Status.PermanentRedirect);
+	}
 });
 
 router.get('*', handleStaticFile);
