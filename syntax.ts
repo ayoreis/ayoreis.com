@@ -12,7 +12,7 @@ export interface Properties extends Record<string, unknown> {
 const LINKS = [
   { url: "/", text: "Ayo Reis" },
   { url: "/about", text: "About" },
-  { url: "https://github.com/ayoreis.com", text: "GitHub" },
+  { url: "https://github.com/ayoreis", text: "GitHub" },
   { url: "https://instagram.com/ayo.reis", text: "Instagram" },
 ];
 
