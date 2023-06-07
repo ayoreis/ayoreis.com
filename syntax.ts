@@ -7,7 +7,7 @@ export interface Properties extends Record<string, unknown> {
   scripts?: string[];
   styles?: string[];
   title?: string;
-}
+} 
 
 const LINKS = [
   { url: "/", text: "Ayo Reis" },
