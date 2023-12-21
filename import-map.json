@@ -1,7 +1,0 @@
-{
-	"imports": {
-		"relax/": "https://deno.land/x/relax@0.1.0/",
-		"std/": "https://deno.land/std@0.177.1/",
-		"marked": "https://esm.sh/marked@5.0.2?exports=marked&bundle&dev&pin=v124"
-	}
-}
