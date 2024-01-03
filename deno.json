@@ -10,6 +10,12 @@
 		"useTabs": true
 	},
 
+	"imports": {
+		"std/": "https://deno.land/std@0.199.0/"
+	},
+
+	"lock": false,
+
 	"tasks": {
 		"dev": "deno run --allow-net=0.0.0.0:8000 --allow-read=index.html --watch=index.html mod.ts"
 	}
