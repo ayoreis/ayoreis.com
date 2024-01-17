@@ -9,6 +9,13 @@
         <title>Ayo Reis</title>
 
         <style>
+            * {
+                box-sizing: border-box;
+
+                margin: 0;
+                padding: 0;
+            }
+
             body {
                 margin-inline: auto;
 
@@ -26,12 +33,34 @@
                 padding-top: 32px;
             }
 
+            main > :not(:first-child) {
+                margin-top: 1lh;
+            }
+
             ul > li:not(:first-child) {
                 margin-top: 0.25lh;
             }
 
+            hr {
+                margin-block: 1lh;
+
+                border: none;
+                border-top: 2px solid white;
+            }
+
             a {
                 color: hsl(calc(360 / 4), 100%, 50%);
+
+                &:visited {
+                    color: hsl(calc(360 / 4 * 3), 100%, 50%);
+                }
+            }
+
+            strong {
+                padding-inline: 0.5ch;
+
+                color: black;
+                background-color: white;
             }
         </style>
     </head>
@@ -49,33 +78,7 @@
         <hr>
 
         <main>
-            <h1>Hello, World!<br/>I am Ayo Reis.</h1>
-
-            <p>I'm 15 and I like programming, open-source, plain text and Git, the internet and the web, drawing, making and learning.</p>
-
-            <p><b>Right now I am:</b></p>
-
-            <ul>
-                <li>
-                    Designing and 3D printing a part to fix my headphones.
-                </li>
-
-                <li>
-                    Making an iOS client for <a href="https://syncthing.net">Syncthing</a>.
-                </li>
-
-                <li>
-                    Practising <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dvorak</a> and <a href="https://www.keybr.com">touch typing</a>.
-                </li>
-
-                <li>
-                    <a href="https://github.com/ayoreis/notes">Taking notes about all kinds of things I want to remember</a>.
-                </li>
-
-                <li>
-                    Planing a bike trip from <a href="https://www.facebook.com/events/679331994301485">Cabo Carvoeiro to Tour Eiffel</a> with my dad.
-                </li>
-            </ul>
+            {markdown}
         </main>
 
         <hr>

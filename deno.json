@@ -6,7 +6,7 @@
 	"fmt": {
 		"proseWrap": "preserve",
 		"semiColons": false,
-		"singleQuote": false,
+		"singleQuote": true,
 		"useTabs": true
 	},
 
@@ -17,6 +17,6 @@
 	"lock": false,
 
 	"tasks": {
-		"dev": "deno run --allow-net=0.0.0.0:8000 --allow-read=index.html --watch=index.html mod.ts"
+		"dev": "deno run --allow-net=0.0.0.0:8000 --allow-read=index.html,index.md --watch=index.html,index.md mod.ts"
 	}
 }
