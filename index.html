@@ -11,6 +11,14 @@
         <title>Ayo Reis</title>
 
         <style>
+            :root {
+                --spacing: 32px;
+                --spacing-relative: 1lh;
+                --spacing-relative-small: 0.25lh;
+
+                --border: 2px solid white;
+            }
+
             * {
                 box-sizing: border-box;
 
@@ -32,22 +40,48 @@
             }
 
             header {
-                padding-top: 32px;
+                padding-top: var(--spacing);
+
+                > nav > ul {
+                    list-style-type: none;
+
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;;
+
+                    > span {
+                        border-left: var(--border);
+                    }
+                }
             }
 
-            main > :not(:first-child) {
-                margin-top: 1lh;
+            main {
+                > :not(:first-child) {
+                    margin-top: var(--spacing-relative);
+                }
+
+                ul > li:not(:first-child) {
+                    margin-top: var(--spacing-relative-small);
+                }
             }
 
-            ul > li:not(:first-child) {
-                margin-top: 0.25lh;
+            footer > div {
+                margin-top: var(--spacing);
+
+                display: flex;
+                justify-content: center;
+                gap: var(--spacing);
+
+                > a > img {
+                    image-rendering: pixelated;
+                }
             }
 
             hr {
-                margin-block: 1lh;
+                margin-block: var(--spacing);
 
                 border: none;
-                border-top: 2px solid white;
+                border-top: var(--border)
             }
 
             a {
@@ -70,10 +104,13 @@
     <body>
         <header>
             <nav>
-                <a href="/">Ayo Reis</a> |
-                <a href="https://github.com/ayoreis">GitHub (tech)</a>
-                <a href="https://instagram.com/ayo.reis">Instagram (art and stuff)</a>
-                <a rel="me" href="https://mastodon.social/@ayoreis">Mastodon (new)</a>
+                <ul>
+                    <li><a href="/">Ayo Reis</a></li>
+                    <span></span>
+                    <li><a href="https://github.com/ayoreis">GitHub</a></li>
+                    <li><a href="https://instagram.com/ayo.reis">Instagram</a></li>
+                    <li><a rel="me" href="https://mastodon.social/@ayoreis">Mastodon</a></li>
+                </ul>
             </nav>
         </header>
 
@@ -87,6 +124,12 @@
 
         <footer>
             <p>Open source at <a href="https://github.com/ayoreis/ayoreis.com">github.com/ayoreis/ayoreis.com</a> with &lt;3</p>
+
+            <div>
+                <a href="https://archlinux.org">
+                    <img src="static/Arch.png" alt="Arch Linux 88x31 button">
+                </a>
+            </div>
         </footer>
     </body>
 </html>
