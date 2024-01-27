@@ -6,4 +6,3 @@ My website
 
 - Code: MIT
 - Content: None (all rights reserved)
-- Arch button: CC0
