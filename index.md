@@ -1,6 +1,6 @@
 # Hello, World!<br/>I am <strong>Ayo Reis</strong>.
 
-I'm 15 and I like programming, open-source, plain text and Git, the internet and the web, drawing, making and learning.
+I'm 16 and I like programming, open-source, plain text and Git, the internet and the web, drawing, making and learning.
 
 **Right [/now](https://nownownow.com/about) I am:**
 
